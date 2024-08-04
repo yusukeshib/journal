@@ -5,9 +5,10 @@ import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 
 const Title = styled.h1`
-  margin-bottom: 0.5rem;
+  font-family: monospace;
 `
 const Description = styled.div`
+  font-family: monospace;
   margin-bottom: 3rem;
 `
 

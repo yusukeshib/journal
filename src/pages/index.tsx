@@ -22,7 +22,7 @@ const IndexPage: React.FC<Record<string, never>> = function IndexPage({ data }) 
               {node.frontmatter.date}
               {` `}
               <Link to={node.frontmatter.slug}>
-                {node.frontmatter.title || `無題`}
+                {node.frontmatter.title || `Untitled`}
               </Link>
             </li>
           )

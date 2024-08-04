@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Journal`,
-    description: `My journal`,
-    author: `Yusuke`,
+    title: `journal`,
+    description: `Yusuke Shibata's journal`,
+    author: `yusuke`,
     siteUrl: `https://yusukeshib.dev`,
   },
   plugins: [
