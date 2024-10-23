@@ -23,7 +23,7 @@ const Layout = ({ author, location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        {title} by {author}
+        {title} by {author} {' '}<DarkModeButton />
       </h1>
     )
   } else {
@@ -32,7 +32,7 @@ const Layout = ({ author, location, title, children }) => {
         <Link className="header-link-home" to="/">
           {title}
         </Link>
-        {' '} by {author}
+        {' '} by {author}{' '}<DarkModeButton />
       </h1>
     )
   }
@@ -42,9 +42,6 @@ const Layout = ({ author, location, title, children }) => {
       {darkMode && <DarkMode />}
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        <DarkModeButton />
-      </footer>
     </div>
   )
 }

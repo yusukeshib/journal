@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { useAtom } from 'jotai'
 import { atomWithStorage } from 'jotai/utils'
+import styled from 'styled-components'
+
+const Button = styled.a`
+  cursor: pointer;
+`
 
 export const darkModeAtom = atomWithStorage('darkMode', false)
 
@@ -9,7 +14,7 @@ export const DarkModeButton = () => {
   const toggleDarkMode = () => setDarkMode(!darkMode)
 
   return (
-    <button onClick={toggleDarkMode}>Switch to {darkMode ? 'light' : 'dark'} mode.</button>
+    <Button onClick={toggleDarkMode}>{darkMode ? '☀️' : '🌙'}</Button>
   )
 }
 
