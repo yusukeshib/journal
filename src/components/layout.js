@@ -28,12 +28,12 @@ const Layout = ({ author, location, title, children }) => {
     )
   } else {
     header = (
-      <h1 className="main-heading">
+      <p className="main-heading">
         <Link className="header-link-home" to="/">
           {title}
         </Link>
         {' '} by {author}{' '}<DarkModeButton />
-      </h1>
+      </p>
     )
   }
 
