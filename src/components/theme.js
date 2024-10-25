@@ -14,7 +14,7 @@ export const DarkModeButton = () => {
   const toggleDarkMode = () => setDarkMode(!darkMode)
 
   return (
-    <Button onClick={toggleDarkMode}>{darkMode ? '☀️' : '🌙'}</Button>
+    <Button onClick={toggleDarkMode}>{!darkMode ? '☀️' : '🌙'}</Button>
   )
 }
 
