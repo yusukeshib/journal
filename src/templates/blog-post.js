@@ -1,9 +1,11 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { Disqus } from 'gatsby-plugin-disqus'
+import { useAtom } from 'jotai'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { darkModeAtom, } from '../components/theme'
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -11,6 +13,7 @@ const BlogPostTemplate = ({
 }) => {
   const author = site.siteMetadata?.author.name;
   const siteTitle = site.siteMetadata?.title || `Title`
+  const [darkMode] = useAtom(darkModeAtom)
 
   return (
     <Layout author={author} location={location} title={siteTitle}>
@@ -60,6 +63,7 @@ const BlogPostTemplate = ({
         </ul>
         <hr />
         <Disqus
+          key={`disqus-${darkMode}`}
           config={{
             url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
             identifier: post.fields.slug,
