@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { Disqus } from 'gatsby-plugin-disqus'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -57,6 +58,14 @@ const BlogPostTemplate = ({
             )}
           </li>
         </ul>
+        <hr />
+        <Disqus
+          config={{
+            url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
+            identifier: post.fields.slug,
+            title: post.frontmatter.title,
+          }}
+        />
       </nav>
     </Layout>
   )
@@ -81,6 +90,7 @@ export const pageQuery = graphql`
   ) {
     site {
       siteMetadata {
+        siteUrl
         title
         author {
           name
@@ -91,6 +101,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
