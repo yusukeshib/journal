@@ -6,6 +6,7 @@ import { useAtom } from 'jotai'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { darkModeAtom, } from '../components/theme'
+import { Collapsable } from '../components/collapsable'
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -62,14 +63,16 @@ const BlogPostTemplate = ({
           </li>
         </ul>
         <hr />
-        <Disqus
-          key={`disqus-${darkMode}`}
-          config={{
-            url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
-            identifier: post.fields.slug,
-            title: post.frontmatter.title,
-          }}
-        />
+        <Collapsable>
+          <Disqus
+            key={`disqus-${darkMode}`}
+            config={{
+              url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
+              identifier: post.fields.slug,
+              title: post.frontmatter.title,
+            }}
+          />
+        </Collapsable>
       </nav>
     </Layout>
   )
