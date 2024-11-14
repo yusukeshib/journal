@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Helmet } from "react-helmet";
 import { Link } from "gatsby"
 import { ThemeStyles, DarkModeButton } from './theme'
 
@@ -28,7 +27,6 @@ const Layout = ({ author, location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <ThemeStyles />
-      <Helmet htmlAttributes={{ lang: 'ja', }} />
       <header className="global-header">{header}</header>
       <main>{children}</main>
     </div>
