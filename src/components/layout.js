@@ -1,23 +1,9 @@
 import * as React from "react"
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby"
-import { useAtom } from 'jotai'
-import { createGlobalStyle } from 'styled-components'
-import { darkModeAtom, DarkModeButton } from './theme'
-
-const DarkMode = createGlobalStyle`
-body {
-  font-family: times, serif;
-  background: ${props => props.dark ? '#222' : '#fff'};
-  color: ${props => props.dark ? '#fff' : '#000'};
-}
-a {
-  color: ${props => props.dark ? '#99f' : 'auto'};
-}
-`
+import { ThemeStyles, DarkModeButton } from './theme'
 
 const Layout = ({ author, location, title, children }) => {
-  const [darkMode] = useAtom(darkModeAtom)
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -41,8 +27,8 @@ const Layout = ({ author, location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <ThemeStyles />
       <Helmet htmlAttributes={{ lang: 'ja', }} />
-      <DarkMode dark={darkMode} />
       <header className="global-header">{header}</header>
       <main>{children}</main>
     </div>
