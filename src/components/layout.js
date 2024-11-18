@@ -10,16 +10,19 @@ const Layout = ({ author, location, title, children }) => {
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        {title} by {author} {' '}<DarkModeButton />
+        <DarkModeButton />
+        {' '}
+        Welcome!
       </h1>
     )
   } else {
     header = (
       <p className="main-heading">
+        <DarkModeButton />
+        {' '}
         <Link className="header-link-home" to="/">
-          {title}
+          Back to index
         </Link>
-        {' '} by {author}{' '}<DarkModeButton />
       </p>
     )
   }

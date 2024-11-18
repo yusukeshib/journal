@@ -23,6 +23,14 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout author={author} location={location} title={siteTitle}>
+      <h3>Who?</h3>
+      <p>
+        Hi, my name is Yusuke. I'm a software engineer based in New York City.
+        <br />
+        I moved from Japan to United States November 2019. It's been six years after that.
+      </p>
+
+      <h3>Diary in Japanese</h3>
       <ul id="index-post-list">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
