@@ -1,40 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[yusuke's portfolio website]]></title><description><![CDATA[yusuke's portfolio website]]></description><link>https://yusukeshib.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 18 Nov 2024 00:39:02 GMT</lastBuildDate><item><title><![CDATA[Yusuke Shibata]]></title><description><![CDATA[Experience Fable 2019 - Present / New York City, NY / Chief Architect, Principal Software Engineer Fable is a browser-based motion design…]]></description><link>https://yusukeshib.dev/cv/</link><guid isPermaLink="false">https://yusukeshib.dev/cv/</guid><content:encoded>&lt;h2&gt;&lt;strong&gt;Experience&lt;/strong&gt;&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[yusuke's portfolio website]]></title><description><![CDATA[yusuke's portfolio website]]></description><link>https://yusukeshib.dev</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 18 Nov 2024 15:21:21 GMT</lastBuildDate><item><title><![CDATA[柴田祐介]]></title><description><![CDATA[経験 Fable 2019年 - 現在 / ニューヨーク州ニューヨーク市 / チーフアーキテクト、プリンシパルソフトウェアエンジニア Fable は、ビデオ、グラフィック、またはアプリ内 (Lottie…]]></description><link>https://yusukeshib.dev/cv/</link><guid isPermaLink="false">https://yusukeshib.dev/cv/</guid><content:encoded>&lt;h2&gt;経験&lt;/h2&gt;
 &lt;h3&gt;Fable&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;2019 - Present / New York City, NY / Chief Architect, Principal Software Engineer&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;2019年 - 現在 / ニューヨーク州ニューヨーク市 / チーフアーキテクト、プリンシパルソフトウェアエンジニア&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fable is a browser-based motion design tool for creating animations for videos, graphics, or in-app (Lottie)use.  Fable had a team of 35 employees, 20 engineers, and over 60,000 users. (&lt;a href=&quot;https://www.crunchbase.com/organization/fable-4b35&quot;&gt;Crunchbase&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;As chief architect, designed and implemented the major systems including Frontend, Back-end, Web Assembly, task processing infra, and the OpenGL-based renderer.&lt;/li&gt;
-&lt;li&gt;Designed a flexible and extensible product structure and a file format that gives users the ability to compose reusable and complex visual-effect functionality.&lt;/li&gt;
-&lt;li&gt;Led the Rust-based rendering engine including a rendering pipeline, shader system and WebAssembly integration.&lt;/li&gt;
-&lt;li&gt;Designed and implemented a highly scalable GPU task (for animation frame generations and thumbnail/preview generations) processing server structure to support 10,000 instance concurrency with high availability.&lt;/li&gt;
-&lt;li&gt;Led development of an &lt;a href=&quot;https://www.fable.app/prism&quot;&gt;AI visual effect functionality&lt;/a&gt; using Stable Diffusion and Python.&lt;/li&gt;
-&lt;li&gt;Led a project to implement Stripe-based subscription/payment system.&lt;/li&gt;
+&lt;li&gt;Fable は、ビデオ、グラフィック、またはアプリ内 (Lottie) 用のアニメーションを作成するためのブラウザベースのモーション デザイン ツールです。Fable には 35 人の従業員、20 人のエンジニア、60,000 人を超えるユーザーがいます。( Crunchbase )&lt;/li&gt;
+&lt;li&gt;チーフアーキテクトとして、フロントエンド、バックエンド、Web アセンブリ、タスク処理インフラ、OpenGL ベースのレンダラーなどの主要なシステムを設計および実装しました。&lt;/li&gt;
+&lt;li&gt;柔軟で拡張可能な製品構造と、ユーザーが再利用可能で複雑な視覚効果機能を構成できるファイル形式を設計しました。&lt;/li&gt;
+&lt;li&gt;レンダリング パイプライン、シェーダー システム、WebAssembly 統合を含む Rust ベースのレンダリング エンジンを主導しました。&lt;/li&gt;
+&lt;li&gt;高可用性を備えた 10,000 インスタンスの同時実行をサポートする、高度にスケーラブルな GPU タスク (アニメーション フレーム生成およびサムネイル/プレビュー生成用) 処理サーバー構造を設計および実装しました。&lt;/li&gt;
+&lt;li&gt;Stable Diffusion と Python を使用してAI 視覚効果機能の開発を主導しました。&lt;/li&gt;
+&lt;li&gt;Stripe ベースのサブスクリプション/支払いシステムを実装するプロジェクトを主導しました。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;Gakko&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;2017 - 2019 / Tokyo, Japan / Engineering Lead, Software Engineer&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Gakko&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;2017 - 2019 / 東京、日本 / エンジニアリング リード、ソフトウェア エンジニア&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Gakko was a platform for creating and selling animated story books for children.&lt;/li&gt;
-&lt;li&gt;Designed and implemented backend using Rest API server with NodeJs and a deployment system on Github CI + AWS.&lt;/li&gt;
-&lt;li&gt;Designed and implemented front end UI app using React and React-Native for multiple platforms&lt;/li&gt;
-&lt;li&gt;Designed and implemented canvas renderer with React-fiber for Web and iOS (Objective C)&lt;/li&gt;
-&lt;li&gt;Led the digital team, and the product we implemented attracted investors, and the engineering team spun out to my next company Fable.&lt;/li&gt;
+&lt;li&gt;Gakko は、子供向けのアニメーションストーリーブックを制作および販売するプラットフォームでした。&lt;/li&gt;
+&lt;li&gt;NodeJs を使用した Rest API サーバーと Github CI + AWS 上のデプロイメント システムを使用してバックエンドを設計および実装しました。&lt;/li&gt;
+&lt;li&gt;複数のプラットフォーム向けにReactとReact-Nativeを使用してフロントエンドUIアプリを設計および実装しました&lt;/li&gt;
+&lt;li&gt;Web および iOS (Objective C) 用の React-fiber を使用してキャンバス レンダラーを設計および実装しました。&lt;/li&gt;
+&lt;li&gt;デジタルチームを率いて、私たちが実装した製品は投資家を引き付け、エンジニアリングチームは私の次の会社であるFableにスピンアウトしました。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;Semi-transparent Design&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;2003 - 2017 / Tokyo, Japan / Engineering Lead, Software Engineer&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Semi-transparent design&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;2003 - 2017 / 東京、日本 / エンジニアリング リード、ソフトウェア エンジニア&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Worked for many art installations to help many artists by writing interactive code using C, C++.&lt;/li&gt;
-&lt;li&gt;JAXA space center website: Led a project to organize a massive amount of documents written by JAXA scientists, and implemented an organization system and administration web app based on WIKI structure.&lt;/li&gt;
-&lt;li&gt;LeoLeoni interactive exhibition: Planned, managed and built an interactive space installation using OpenGL, Mac OS app using WebCam that was inspired by the famous picture book “Swimmy”.&lt;/li&gt;
+&lt;li&gt;C、C++ を使用してインタラクティブなコードを記述することで、多くのアート インスタレーションに携わり、多くのアーティストを支援しました。&lt;/li&gt;
+&lt;li&gt;JAXA宇宙センターウェブサイト：JAXAの科学者が作成した膨大な文書を整理するプロジェクトを主導し、WIKI構造に基づいた組織システムと管理ウェブアプリを実装しました。&lt;/li&gt;
+&lt;li&gt;LeoLeoni インタラクティブ展示: 有名な絵本「スイミー」にインスピレーションを得て、OpenGL、WebCam を使用した Mac OS アプリを使用したインタラクティブな空間インスタレーションを企画、管理、構築しました。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;Creo&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;1998 - 2003 / Tokyo, Japan / Software Engineer&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Creo&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;1998 - 2003 / 東京、日本 / ソフトウェア エンジニア&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Worked on a project to implement XML parser in C on Solaris Unix.&lt;/li&gt;
-&lt;li&gt;Participated in a big government-driven project of TV Digital transformation. I was part of a sub-project to build a service to orchestrate a Radio Wave Transmission System in C, C++ on UNIX in a facility of Tokyo tower.&lt;/li&gt;
-&lt;li&gt;Built a high performance chat server as a member of a five engineer team on UNIX, C, C++ for KDDI.&lt;/li&gt;
+&lt;li&gt;Solaris Unix 上で C で XML パーサーを実装するプロジェクトに取り組みました。&lt;/li&gt;
+&lt;li&gt;政府主導の大規模なテレビデジタル化プロジェクトに参加しました。東京タワーの施設で UNIX 上の C、C++ で電波伝送システムを調整するサービスを構築するサブプロジェクトに参加しました。&lt;/li&gt;
+&lt;li&gt;KDDI 向けに UNIX、C、C++ のエンジニア 5 名からなるチームの一員として高性能チャット サーバーを構築しました。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;&lt;strong&gt;Education&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The University of Tokyo, Applied physics&lt;/p&gt;</content:encoded></item><item><title><![CDATA[あー、一番行きたかった会社の面接落ちた]]></title><description><![CDATA[…]]></description><link>https://yusukeshib.dev/blog/2024-11-16/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/2024-11-16/</guid><pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今週は月曜に一番行きたい会社の長い一日中の面接が終わって、ただただ、面接の結果を待っているだけだった。何もやる気出ず。一昨日はアリアスター監督のミッドサマーを一人で夜ご飯にステーキを焼いて食べた後に見た。イカれてて不気味で面白かった。&lt;/p&gt;
+&lt;h2&gt;教育&lt;/h2&gt;
+&lt;p&gt;東京大学応用物理学科&lt;/p&gt;
+&lt;!--
+## **Experience**
+
+### Fable
+
+*2019 \- Present / New York City, NY / Chief Architect, Principal Software Engineer*
+
+* Fable is a browser-based motion design tool for creating animations for videos, graphics, or in-app (Lottie)use.  Fable had a team of 35 employees, 20 engineers, and over 60,000 users. ([Crunchbase](https://www.crunchbase.com/organization/fable-4b35))  
+* As chief architect, designed and implemented the major systems including Frontend, Back-end, Web Assembly, task processing infra, and the OpenGL-based renderer.  
+* Designed a flexible and extensible product structure and a file format that gives users the ability to compose reusable and complex visual-effect functionality.  
+* Led the Rust-based rendering engine including a rendering pipeline, shader system and WebAssembly integration.  
+* Designed and implemented a highly scalable GPU task (for animation frame generations and thumbnail/preview generations) processing server structure to support 10,000 instance concurrency with high availability.  
+* Led development of an [AI visual effect functionality](https://www.fable.app/prism) using Stable Diffusion and Python.   
+* Led a project to implement Stripe-based subscription/payment system.
+
+### **Gakko**
+
+*2017 \- 2019 / Tokyo, Japan / Engineering Lead, Software Engineer*
+
+* Gakko was a platform for creating and selling animated story books for children.  
+* Designed and implemented backend using Rest API server with NodeJs and a deployment system on Github CI \+ AWS.  
+* Designed and implemented front end UI app using React and React-Native for multiple platforms  
+* Designed and implemented canvas renderer with React-fiber for Web and iOS (Objective C)  
+* Led the digital team, and the product we implemented attracted investors, and the engineering team spun out to my next company Fable.
+
+### **Semi-transparent Design**
+
+*2003 \- 2017 / Tokyo, Japan / Engineering Lead, Software Engineer*
+
+* Worked for many art installations to help many artists by writing interactive code using C, C++.  
+* JAXA space center website: Led a project to organize a massive amount of documents written by JAXA scientists, and implemented an organization system and administration web app based on WIKI structure.  
+* LeoLeoni interactive exhibition: Planned, managed and built an interactive space installation using OpenGL, Mac OS app using WebCam that was inspired by the famous picture book “Swimmy”.
+
+### **Creo**
+
+*1998 \- 2003 / Tokyo, Japan / Software Engineer*
+
+* Worked on a project to implement XML parser in C on Solaris Unix.  
+* Participated in a big government-driven project of TV Digital transformation. I was part of a sub-project to build a service to orchestrate a Radio Wave Transmission System in C, C++ on UNIX in a facility of Tokyo tower.  
+* Built a high performance chat server as a member of a five engineer team on UNIX, C, C++ for KDDI.
+
+## **Education**
+
+The University of Tokyo, Applied physics
+--&gt;</content:encoded></item><item><title><![CDATA[あー、一番行きたかった会社の面接落ちた]]></title><description><![CDATA[…]]></description><link>https://yusukeshib.dev/blog/2024-11-16/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/2024-11-16/</guid><pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今週は月曜に一番行きたい会社の長い一日中の面接が終わって、ただただ、面接の結果を待っているだけだった。何もやる気出ず。一昨日はアリアスター監督のミッドサマーを一人で夜ご飯にステーキを焼いて食べた後に見た。イカれてて不気味で面白かった。&lt;/p&gt;
 &lt;p&gt;昨日は面接の返事来るだろうと思って気が気でなかったから、昼ごはんにレトルトのスリランカカレーを食べた後に、午後の時間をメトロポリタン美術館に行ってひたすら中を歩いて過ごしていた。&lt;/p&gt;
 &lt;p&gt;返事来ないなーと思っていたら、６時過ぎに来て、今回は見送らせていただきます、的なメールだった。一個ペアリングの面接ミスったから、ダメが30%くらいかな、と思っていたからショックだった。あー、くそー！残念。&lt;/p&gt;
 &lt;p&gt;そこから色んな人にぶちまけてたら２時間くらいで気持ち戻ってきて、二番目に行きたい会社の水曜の面接頑張ろう、という気に一応は、なっている。本音は精神的に疲れててもう逃げ出したい。まぁ、今回は初めてのアメリカでの面接の挑戦だし、最悪の体験をしてるわけではないので、次の会社が今オファーもらっている会社でもかなり楽しそうだから、それでいいんだけど。&lt;/p&gt;
