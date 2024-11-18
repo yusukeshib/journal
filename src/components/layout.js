@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { ThemeStyles, DarkModeButton } from './theme'
 
-const Layout = ({ author, location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -11,8 +11,6 @@ const Layout = ({ author, location, title, children }) => {
     header = (
       <h1 className="main-heading">
         <DarkModeButton />
-        {' '}
-        Welcome!
       </h1>
     )
   } else {
@@ -21,7 +19,7 @@ const Layout = ({ author, location, title, children }) => {
         <DarkModeButton />
         {' '}
         <Link className="header-link-home" to="/">
-          Back to index
+          インデックスに戻る
         </Link>
       </p>
     )
@@ -31,7 +29,7 @@ const Layout = ({ author, location, title, children }) => {
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <ThemeStyles />
       <header className="global-header">{header}</header>
-      <main>{children}</main>
+      <main className="main">{children}</main>
     </div>
   )
 }

@@ -3,7 +3,11 @@ body {
   margin: 2rem;
 }
 
-.blog-post, .blog-post-nav {
+ul {
+  padding-inline-start: 1rem;
+}
+
+.main {
   max-width: 640px;
 }
 
