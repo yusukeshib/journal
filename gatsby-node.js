@@ -8,7 +8,9 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const blogTemplate = path.resolve(`./src/templates/blog-post.js`)
+// Normal pages
+const pageTemplate = path.resolve(`./src/templates/page.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -37,13 +39,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
     return
   }
-
-  const posts = result.data.allMarkdownRemark.nodes
+  const nodes = result.data.allMarkdownRemark.nodes
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
-
+  const posts = nodes.filter(post => post.fields.slug.startsWith('/blog/'))
   if (posts.length > 0) {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
@@ -51,7 +52,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: blogTemplate,
         context: {
           id: post.id,
           previousPostId,
@@ -59,6 +60,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     })
+  }
+
+  const pages = nodes.filter(post => !post.fields.slug.startsWith('/blog/'))
+  if (pages.length > 0) {
+    for (const page of pages) {
+      createPage({
+        path: page.fields.slug,
+        component: pageTemplate,
+        context: {
+          id: page.id,
+        },
+      })
+    }
   }
 }
 

@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -8,7 +7,7 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const author = data.site.siteMetadata?.author.name;
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes.filter(node => node.fields.slug.startsWith('/blog/'))
 
   if (posts.length === 0) {
     return (

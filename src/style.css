@@ -10,6 +10,7 @@ body {
 .main-heading {
   font-size: 1rem;
   font-weight: normal;
+  font-style: italic;
 }
 
 #index-post-list {
