@@ -1,6 +1,6 @@
 body {
   padding: 0;
-  margin: 2rem;
+  margin: 0;
 }
 
 ul {
@@ -20,4 +20,31 @@ ul {
 #index-post-list {
   list-style: none;
   padding-left: 0;
+}
+
+.global-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 2rem;
+  font-family: times, serif;
+}
+
+.global-wrapper.light {
+  background: #fff;
+  color: #000;
+}
+.global-wrapper.dark {
+  background: #111;
+  color: #fff;
+}
+
+.global-wrapper.dark a {
+  color: #66f;
+}
+.global-wrapper.dark a:visited {
+  color: #66a;
 }

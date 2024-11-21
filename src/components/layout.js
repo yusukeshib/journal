@@ -1,8 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { ThemeStyles, DarkModeButton } from './theme'
+import cx from 'classnames'
+import { useAtom } from 'jotai'
+import { DarkModeButton, darkModeAtom } from './theme'
 
 const Layout = ({ location, children }) => {
+  const [darkMode] = useAtom(darkModeAtom)
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -26,8 +29,7 @@ const Layout = ({ location, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <ThemeStyles />
+    <div className={cx("global-wrapper", darkMode ? 'dark' : 'light')} data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main className="main">{children}</main>
     </div>

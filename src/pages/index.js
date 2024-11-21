@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const author = data.site.siteMetadata?.author.name;
   const posts = data.allMarkdownRemark.nodes.filter(node => node.fields.slug.startsWith('/blog/'))
 
   if (posts.length === 0) {
