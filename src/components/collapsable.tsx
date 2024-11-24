@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export const Collapsable = function Collapsable({ children }) {
+export const Collapsable: React.FC<{ children: React.ReactNode }> = function Collapsable({ children }) {
   const [opened, setOpened] = useState(false)
 
   if (opened) {

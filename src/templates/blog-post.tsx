@@ -1,25 +1,23 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, type PageProps } from 'gatsby';
 import { Disqus } from 'gatsby-plugin-disqus';
 import { useAtom } from 'jotai';
 
-import Layout from '../components/layout';
-import Seo from '../components/seo';
+import { Layout } from '../components/layout';
+import { Seo } from '../components/seo';
 import { darkModeAtom } from '../components/theme';
 import { Collapsable } from '../components/collapsable';
 
-function BlogPostTemplate({
+const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
   data: {
     previous, next, site, markdownRemark: post,
   },
   location,
 }) {
-  const author = site.siteMetadata?.author.name;
-  const siteTitle = site.siteMetadata?.title || 'Title';
   const [darkMode] = useAtom(darkModeAtom);
 
   return (
-    <Layout author={author} location={location} title={siteTitle}>
+    <Layout location={location}>
       <article
         className="blog-post"
         itemScope
@@ -78,7 +76,7 @@ function BlogPostTemplate({
   );
 }
 
-export function Head({ data: { markdownRemark: post } }) {
+export const Head: React.FC<PageProps> = function Head({ data: { markdownRemark: post } }) {
   return (
     <Seo
       title={post.frontmatter.title}

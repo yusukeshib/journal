@@ -4,9 +4,13 @@ import cx from 'classnames';
 import { useAtom } from 'jotai';
 import { DarkModeButton, darkModeAtom } from './theme';
 
-function Layout({ location, children }) {
+export const Layout: React.FC<{
+  location: { pathname: string; };
+  children: React.ReactNode;
+}> = function Layout({ location, children }) {
   const [darkMode] = useAtom(darkModeAtom);
-  const rootPath = `${__PATH_PREFIX__}/`;
+  // const rootPath = `${__PATH_PREFIX__}/`;
+  const rootPath = `/`;
   const isRootPath = location.pathname === rootPath;
   let header;
 
@@ -38,5 +42,3 @@ function Layout({ location, children }) {
     </div>
   );
 }
-
-export default Layout;
