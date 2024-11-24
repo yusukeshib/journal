@@ -1,20 +1,22 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { Disqus } from 'gatsby-plugin-disqus'
-import { useAtom } from 'jotai'
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
+import { Disqus } from 'gatsby-plugin-disqus';
+import { useAtom } from 'jotai';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { darkModeAtom, } from '../components/theme'
-import { Collapsable } from '../components/collapsable'
+import Layout from '../components/layout';
+import Seo from '../components/seo';
+import { darkModeAtom } from '../components/theme';
+import { Collapsable } from '../components/collapsable';
 
-const BlogPostTemplate = ({
-  data: { previous, next, site, markdownRemark: post },
+function BlogPostTemplate({
+  data: {
+    previous, next, site, markdownRemark: post,
+  },
   location,
-}) => {
+}) {
   const author = site.siteMetadata?.author.name;
-  const siteTitle = site.siteMetadata?.title || `Title`
-  const [darkMode] = useAtom(darkModeAtom)
+  const siteTitle = site.siteMetadata?.title || 'Title';
+  const [darkMode] = useAtom(darkModeAtom);
 
   return (
     <Layout author={author} location={location} title={siteTitle}>
@@ -26,9 +28,7 @@ const BlogPostTemplate = ({
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>
-            <em>
-              {post.frontmatter.date}
-            </em>
+            <em>{post.frontmatter.date}</em>
           </p>
         </header>
         <section
@@ -40,10 +40,10 @@ const BlogPostTemplate = ({
       <nav className="blog-post-nav">
         <ul
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
             padding: 0,
           }}
         >
@@ -75,19 +75,19 @@ const BlogPostTemplate = ({
         </Collapsable>
       </nav>
     </Layout>
-  )
+  );
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
+export function Head({ data: { markdownRemark: post } }) {
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
     />
-  )
+  );
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -134,4 +134,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

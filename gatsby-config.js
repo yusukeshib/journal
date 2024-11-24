@@ -72,7 +72,9 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              const posts = allMarkdownRemark.nodes.filter(post => post.fields.slug.startsWith('/blog/'))
+              const posts = allMarkdownRemark.nodes.filter(post =>
+                post.fields.slug.startsWith("/blog/")
+              )
               return posts.map(node => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
@@ -121,8 +123,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `journal-by-yusuke`
-      }
+        shortname: `journal-by-yusuke`,
+      },
     },
   ],
 }
