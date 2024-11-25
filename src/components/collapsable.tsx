@@ -1,13 +1,17 @@
 import React, { useState } from "react"
+import { useAtom } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
+
+export const collapseAtom = atomWithStorage('collapse', true);
 
 export const Collapsable: React.FC<{ children: React.ReactNode }> = function Collapsable({ children }) {
-  const [opened, setOpened] = useState(false)
+  const [collapsed, setCollapsed] = useAtom(collapseAtom);
 
-  if (opened) {
+  if (!collapsed) {
     return (
       <>
         <div>
-          <a href="javascript:void(0)" onClick={() => setOpened(false)}>
+          <a href="javascript:void(0)" onClick={() => setCollapsed(true)}>
             コメント欄を隠す
           </a>
         </div>
@@ -16,7 +20,7 @@ export const Collapsable: React.FC<{ children: React.ReactNode }> = function Col
     )
   } else {
     return (
-      <a href="javascript:void(0)" onClick={() => setOpened(true)}>
+      <a href="javascript:void(0)" onClick={() => setCollapsed(false)}>
         コメントを見る
       </a>
     )
