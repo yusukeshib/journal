@@ -7,14 +7,10 @@ ul {
   padding-inline-start: 1rem;
 }
 
-.main {
-  max-width: 640px;
-}
-
 .main-heading {
   font-size: 1rem;
-  font-weight: normal;
   font-style: italic;
+  position: relative;
 }
 
 #index-post-list {
@@ -33,6 +29,10 @@ ul {
   font-family: times, serif;
 }
 
+.global {
+  max-width: 640px;
+}
+
 .global-wrapper.light {
   background: #fff;
   color: #000;
@@ -43,8 +43,17 @@ ul {
 }
 
 .global-wrapper.dark a {
-  color: #66f;
+  color: #fff;
 }
 .global-wrapper.dark a:visited {
-  color: #66a;
+  color: #999;
+}
+
+.theme-button {
+  text-decoration: none;
+}
+.main-heading-theme-button {
+  position: absolute;
+  right: 0;
+  top: 0;
 }

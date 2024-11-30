@@ -17,14 +17,18 @@ export const Layout: React.FC<{
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <DarkModeButton />
+        <span className="main-heading-theme-button">
+          <DarkModeButton />
+        </span>
+        ゆうすけのポートフォリオ
       </h1>
     );
   } else {
     header = (
       <p className="main-heading">
-        <DarkModeButton />
-        {' '}
+        <span className="main-heading-theme-button">
+          <DarkModeButton />
+        </span>
         <Link className="header-link-home" to="/">
           インデックスに戻る
         </Link>
@@ -37,8 +41,10 @@ export const Layout: React.FC<{
       className={cx('global-wrapper', darkMode ? 'dark' : 'light')}
       data-is-root-path={isRootPath}
     >
-      <header className="global-header">{header}</header>
-      <main className="main">{children}</main>
+      <div className="global">
+        <header className="global-header">{header}</header>
+        <main className="main">{children}</main>
+      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export function DarkModeButton() {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom);
   const toggleDarkMode = () => setDarkMode(!darkMode);
   return (
-    <a href="javascript:void(0)" onClick={toggleDarkMode}>
+    <a className="theme-button" href="javascript:void(0)" onClick={toggleDarkMode}>
       {!darkMode ? '☀️' : '🌙'}
     </a>
   );
