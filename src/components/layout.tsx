@@ -17,18 +17,14 @@ export const Layout: React.FC<{
   if (isRootPath) {
     header = (
       <h1 className="main-heading">
-        <span className="main-heading-theme-button">
-          <DarkModeButton />
-        </span>
-        ゆうすけのポートフォリオ
+        <DarkModeButton />
+        {/**ゆうすけのポートフォリオ */}
       </h1>
     );
   } else {
     header = (
       <p className="main-heading">
-        <span className="main-heading-theme-button">
-          <DarkModeButton />
-        </span>
+        <DarkModeButton />
         <Link className="header-link-home" to="/">
           インデックスに戻る
         </Link>

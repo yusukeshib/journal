@@ -10,7 +10,6 @@ ul {
 .main-heading {
   font-size: 1rem;
   font-style: italic;
-  position: relative;
 }
 
 #index-post-list {
@@ -25,12 +24,13 @@ ul {
   right: 0;
   bottom: 0;
   overflow: auto;
-  padding: 2rem;
+  padding: 1rem;
   font-family: times, serif;
 }
 
 .global {
-  max-width: 640px;
+  max-width: 720px;
+  line-height: 1.8rem;
 }
 
 .global-wrapper.light {
@@ -51,9 +51,4 @@ ul {
 
 .theme-button {
   text-decoration: none;
-}
-.main-heading-theme-button {
-  position: absolute;
-  right: 0;
-  top: 0;
 }

@@ -21,6 +21,7 @@ const BlogIndex: React.FC<PageProps> = function BlogIndex({ data, location }) {
 
   return (
     <Layout location={location}>
+      {/*
       <p>
         私は2019年からアメリカのニューヨークでソフトウェアエンジニアとして働いてます。
         日本生まれ日本育ちです。日本があまり合わず、海外に挑戦することにしました。
@@ -28,6 +29,7 @@ const BlogIndex: React.FC<PageProps> = function BlogIndex({ data, location }) {
       </p>
 
       <h3>日記</h3>
+      */}
       <ul id="index-post-list">
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
