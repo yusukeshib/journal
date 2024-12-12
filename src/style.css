@@ -10,6 +10,7 @@ ul {
 .main-heading {
   font-size: 1rem;
   font-style: italic;
+  font-weight: normal;
 }
 
 #index-post-list {
@@ -38,7 +39,7 @@ ul {
   color: #000;
 }
 .global-wrapper.dark {
-  background: #111;
+  background: #222;
   color: #fff;
 }
 
@@ -46,7 +47,7 @@ ul {
   color: #fff;
 }
 .global-wrapper.dark a:visited {
-  color: #999;
+  color: #aaa;
 }
 
 .theme-button {

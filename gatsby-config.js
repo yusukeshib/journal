@@ -9,11 +9,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `yusuke's portfolio website`,
+    title: `journal by yusuke`,
     author: {
       name: `yusuke`,
     },
-    description: `yusuke's portfolio website`,
+    description: `journal by yusuke`,
     siteUrl: `https://yusukeshib.dev/`,
   },
   plugins: [
@@ -39,7 +39,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 1080,
             },
           },
           {
@@ -101,7 +101,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "yusuke's portfolio website",
+            title: "journal by yusuke",
           },
         ],
       },
@@ -109,8 +109,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `yusuke's portfolio website`,
-        short_name: `Yusuke's portfolio website`,
+        name: `journal by yusuke`,
+        short_name: `journal by yusuke`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
