@@ -18,7 +18,8 @@ export const Layout: React.FC<{
     header = (
       <h1 className="main-heading">
         <DarkModeButton />
-        {' journal by yusuke'}
+        {' '}
+        yusuke's website
       </h1>
     );
   } else {
