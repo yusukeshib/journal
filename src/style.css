@@ -1,4 +1,5 @@
 body {
+  font-size: 16px;
   padding: 0;
   margin: 0;
 }
@@ -11,6 +12,7 @@ ul {
   font-size: 1rem;
   font-style: italic;
   font-weight: normal;
+  margin: 0;
 }
 
 #index-post-list {
@@ -31,7 +33,6 @@ ul {
 
 .global {
   max-width: 720px;
-  line-height: 1.8rem;
 }
 
 .global-wrapper.light {

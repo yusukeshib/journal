@@ -1,21 +1,18 @@
-import * as React from 'react';
-import { Link, graphql, type PageProps } from 'gatsby';
-import { Disqus } from 'gatsby-plugin-disqus';
-import { useAtom } from 'jotai';
+import * as React from "react"
+import { Link, graphql, type PageProps } from "gatsby"
+import { Layout } from "../components/layout"
+import { Seo } from "../components/seo"
 
-import { Layout } from '../components/layout';
-import { Seo } from '../components/seo';
-import { darkModeAtom } from '../components/theme';
-import { Collapsable } from '../components/collapsable';
+import { Disqus } from "gatsby-plugin-disqus"
+import { useAtom } from "jotai"
+import { darkModeAtom } from "../components/theme"
+import { Collapsable } from "../components/collapsable"
 
 const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
-  data: {
-    previous, next, site, markdownRemark: post,
-  },
+  data: { previous, next, site, markdownRemark: post },
   location,
 }) {
-  const [darkMode] = useAtom(darkModeAtom);
-
+  const [darkMode] = useAtom(darkModeAtom)
   return (
     <Layout location={location}>
       <article
@@ -33,34 +30,24 @@ const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
       </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← 古いエントリー
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                新しいエントリー →
-              </Link>
-            )}
-          </li>
-        </ul>
-        <hr />
+      <p className="main-heading">
+        {previous && (
+          <>
+            {" "}
+            <Link to={previous.fields.slug} rel="prev">
+              Older
+            </Link>
+          </>
+        )}
+        {next && (
+          <>
+            {" "}
+            <Link to={next.fields.slug} rel="next">
+              Newer
+            </Link>
+          </>
+        )}{" "}
         <Collapsable>
           <Disqus
             key={`disqus-${darkMode}`}
@@ -71,21 +58,23 @@ const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
             }}
           />
         </Collapsable>
-      </nav>
+      </p>
     </Layout>
-  );
+  )
 }
 
-export const Head: React.FC<PageProps> = function Head({ data: { markdownRemark: post } }) {
+export const Head: React.FC<PageProps> = function Head({
+  data: { markdownRemark: post },
+}) {
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
     />
-  );
+  )
 }
 
-export default BlogPostTemplate;
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -132,4 +121,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
