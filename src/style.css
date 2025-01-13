@@ -1,5 +1,6 @@
 body {
   font-size: 16px;
+  font-family: times, serif;
   padding: 0;
   margin: 0;
 }
@@ -15,42 +16,10 @@ ul {
   margin: 0;
 }
 
-#index-post-list {
-  list-style: none;
-  padding-left: 0;
-}
-
 .global-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
   padding: 1rem;
-  font-family: times, serif;
-}
-
-.global {
+  background: #fff;
+  color: #000;
   max-width: 720px;
 }
 
-.global-wrapper.light {
-  background: #fff;
-  color: #000;
-}
-.global-wrapper.dark {
-  background: #222;
-  color: #fff;
-}
-
-.global-wrapper.dark a {
-  color: #fff;
-}
-.global-wrapper.dark a:visited {
-  color: #aaa;
-}
-
-.theme-button {
-  text-decoration: none;
-}

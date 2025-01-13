@@ -5,14 +5,12 @@ import { Seo } from "../components/seo"
 
 import { Disqus } from "gatsby-plugin-disqus"
 import { useAtom } from "jotai"
-import { darkModeAtom } from "../components/theme"
 import { Collapsable } from "../components/collapsable"
 
 function BlogPostTemplate({
   data: { previous, next, site, markdownRemark: post },
   location,
 }: PageProps<DataProps>) {
-  const [darkMode] = useAtom(darkModeAtom)
   return (
     <Layout location={location}>
       <article
@@ -50,7 +48,6 @@ function BlogPostTemplate({
         )}{" "}
         <Collapsable>
           <Disqus
-            key={`disqus-${darkMode}`}
             config={{
               url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
               identifier: post.fields.slug,
