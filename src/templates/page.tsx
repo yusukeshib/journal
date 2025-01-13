@@ -1,9 +1,11 @@
-import * as React from 'react';
-import { graphql, type PageProps } from 'gatsby';
+import * as React from "react"
+import { graphql, type PageProps } from "gatsby"
+import { Layout } from "../components/layout"
 
-import { Layout } from '../components/layout';
-
-const PageTemplate: React.FC<PageProps> = function PageTemplate({ data: { markdownRemark: post }, location }) {
+function PageTemplate({
+  data: { markdownRemark: post },
+  location,
+}: PageProps<DataProps>) {
   return (
     <Layout location={location}>
       <article className="page" itemScope itemType="http://schema.org/Article">
@@ -16,10 +18,29 @@ const PageTemplate: React.FC<PageProps> = function PageTemplate({ data: { markdo
         />
       </article>
     </Layout>
-  );
+  )
 }
 
-export default PageTemplate;
+export default PageTemplate
+
+type DataProps = {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+      title: string
+      author: {
+        name: string
+      }
+    }
+  }
+  markdownRemark: {
+    id: string
+    excerpt: string
+    html: string
+    fields: { slug: string }
+    frontmatter: { title: string }
+  }
+}
 
 export const pageQuery = graphql`
   query PageBySlug($id: String!) {
@@ -44,4 +65,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,12 +1,15 @@
 import * as React from "react"
 import cx from "classnames"
-import { useAtom } from "jotai"
-import { darkModeAtom } from "./theme"
+// import { useAtom } from "jotai"
+// import { darkModeAtom } from "./theme"
 
-export const Layout: React.FC<{
+export function Layout({
+  location,
+  children,
+}: {
   location: { pathname: string }
   children: React.ReactNode
-}> = function Layout({ location, children }) {
+}) {
   const darkMode = false
   // const [darkMode] = useAtom(darkModeAtom)
   // const rootPath = `${__PATH_PREFIX__}/`;

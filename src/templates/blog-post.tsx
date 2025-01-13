@@ -8,10 +8,10 @@ import { useAtom } from "jotai"
 import { darkModeAtom } from "../components/theme"
 import { Collapsable } from "../components/collapsable"
 
-const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
+function BlogPostTemplate({
   data: { previous, next, site, markdownRemark: post },
   location,
-}) {
+}: PageProps<DataProps>) {
   const [darkMode] = useAtom(darkModeAtom)
   return (
     <Layout location={location}>
@@ -63,9 +63,7 @@ const BlogPostTemplate: React.FC<PageProps> = function BlogPostTemplate({
   )
 }
 
-export const Head: React.FC<PageProps> = function Head({
-  data: { markdownRemark: post },
-}) {
+export function Head({ data: { markdownRemark: post } }: PageProps<DataProps>) {
   return (
     <Seo
       title={post.frontmatter.title}
@@ -75,6 +73,41 @@ export const Head: React.FC<PageProps> = function Head({
 }
 
 export default BlogPostTemplate
+
+type DataProps = {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+      title: string
+      author: {
+        name: string
+      }
+    }
+  }
+  markdownRemark: {
+    id: string
+    excerpt: string
+    html: string
+    fields: { slug: string }
+    frontmatter: {
+      date: string
+      title: string
+      description: string
+    }
+  }
+  previous?: {
+    fields: { slug: string }
+    frontmatter: {
+      title: string
+    }
+  }
+  next?: {
+    fields: { slug: string }
+    frontmatter: {
+      title: string
+    }
+  }
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
@@ -99,8 +132,8 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title
         date(formatString: "MMMM DD, YYYY")
+        title
         description
       }
     }

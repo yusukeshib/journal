@@ -1,19 +1,16 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
-
-export const Seo: React.FC<{
-  description?: string;
-  title: string;
-  children?: React.ReactNode;
-}> = function Seo({ description, title, children }) {
+export function Seo({
+  description,
+  title,
+  children,
+}: {
+  description?: string
+  title: string
+  children?: React.ReactNode
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,11 +24,11 @@ export const Seo: React.FC<{
           }
         }
       }
-    `,
-  );
+    `
+  )
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata?.title
 
   return (
     <>
@@ -43,12 +40,12 @@ export const Seo: React.FC<{
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={site.siteMetadata?.social?.twitter || ''}
+        content={site.siteMetadata?.social?.twitter || ""}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <Helmet htmlAttributes={{ lang: 'ja' }} />
+      <Helmet htmlAttributes={{ lang: "ja" }} />
       {children}
     </>
-  );
+  )
 }

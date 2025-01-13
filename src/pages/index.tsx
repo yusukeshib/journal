@@ -4,7 +4,7 @@ import { Link, graphql, type PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 
-const BlogIndex: React.FC<PageProps> = function BlogIndex({ data, location }) {
+function IndexRoute({ data, location }: PageProps<DataProps>) {
   const posts = data.allMarkdownRemark.nodes.filter(node =>
     node.fields.slug.startsWith("/blog/")
   )
@@ -150,7 +150,7 @@ const BlogIndex: React.FC<PageProps> = function BlogIndex({ data, location }) {
   )
 }
 
-export default BlogIndex
+export default IndexRoute
 
 /**
  * Head export to define metadata for the page
@@ -159,6 +159,28 @@ export default BlogIndex
  */
 export function Head() {
   return <Seo title="All posts" />
+}
+
+type DataProps = {
+  site: {
+    siteMetadata: {
+      title: string
+      author: {
+        name: string
+      }
+    }
+  }
+  allMarkdownRemark: {
+    nodes: {
+      excerpt: string
+      fields: { slug: string }
+      frontmatter: {
+        date: string
+        title: string
+        description: string
+      }
+    }[]
+  }
 }
 
 export const pageQuery = graphql`
