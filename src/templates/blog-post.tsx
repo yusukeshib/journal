@@ -1,11 +1,9 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
+import { Disqus } from "gatsby-plugin-disqus"
+
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
-
-import { Disqus } from "gatsby-plugin-disqus"
-import { useAtom } from "jotai"
-import { Collapsable } from "../components/collapsable"
 
 function BlogPostTemplate({
   data: { previous, next, site, markdownRemark: post },
@@ -46,7 +44,7 @@ function BlogPostTemplate({
             </Link>
           </>
         )}{" "}
-        <Collapsable>
+        {/*<Collapsable>
           <Disqus
             config={{
               url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
@@ -54,7 +52,7 @@ function BlogPostTemplate({
               title: post.frontmatter.title,
             }}
           />
-        </Collapsable>
+        </Collapsable>*/}
       </p>
     </Layout>
   )

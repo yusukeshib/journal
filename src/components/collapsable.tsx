@@ -1,26 +1,37 @@
-import React from "react"
-import { useAtom } from "jotai"
-import { atomWithStorage } from "jotai/utils"
+import React, { type ReactNode, useState } from "react"
+import { styled } from "styled-components"
 
-export const collapseAtom = atomWithStorage("collapse", true)
+export function Collapsable({
+  defaultCollapsed = false,
+  title,
+  children,
+}: {
+  defaultCollapsed?: boolean
+  title: ReactNode
+  children: ReactNode
+}) {
+  const [collapsed, setCollapsed] = useState(defaultCollapsed)
 
-export function Collapsable({ children }: { children: React.ReactNode }) {
-  const [collapsed, setCollapsed] = useAtom(collapseAtom)
-
-  if (!collapsed) {
-    return (
-      <>
-        <a href="javascript:void(0)" onClick={() => setCollapsed(true)}>
-          Hide comments
-        </a>
-        {children}
-      </>
-    )
-  } else {
-    return (
-      <a href="javascript:void(0)" onClick={() => setCollapsed(false)}>
-        Show comments
-      </a>
-    )
+  const toggle = () => {
+    setCollapsed(c => !c)
   }
+
+  return (
+    <>
+      <Title onClick={toggle}>
+        {collapsed ? "▸" : "▾"}
+        {title}
+      </Title>
+
+      {!collapsed && children}
+    </>
+  )
 }
+
+const Title = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+`
