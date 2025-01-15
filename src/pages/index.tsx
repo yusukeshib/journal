@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
+import { styled } from "styled-components"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
@@ -25,25 +26,28 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
   return (
     <Layout location={location}>
       <h2>Yusuke Shibata</h2>
-      Hi, I'm Yusuke Shibata, a software engineer in United States. I'm
-      originally from Japan. I had lived in Japan for almost fourty years. And I
-      decided to move to New York City in United States.
-      <h3>Journal (in Japanese)</h3>
-      <ul>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+      <p>
+        Hi, I'm Yusuke Shibata, a software engineer in United States. I'm
+        originally from Japan. I had lived in Japan for almost fourty years. And
+        I decided to move to New York City in United States.
+      </p>
+      <Collapsable title={<H3>Journal (in Japanese)</H3>}>
+        <ul>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
 
-          return (
-            <li key={post.fields.slug}>
-              <Link to={post.fields.slug} itemProp="url">
-                <span itemProp="headline">{title}</span>
-              </Link>
-              <em> ({post.frontmatter.date})</em>
-            </li>
-          )
-        })}
-      </ul>
-      <Collapsable title={<h3>Experience</h3>} defaultCollapsed>
+            return (
+              <li key={post.fields.slug}>
+                <Link to={post.fields.slug} itemProp="url">
+                  <span itemProp="headline">{title}</span>
+                </Link>
+                <em> ({post.frontmatter.date})</em>
+              </li>
+            )
+          })}
+        </ul>
+      </Collapsable>
+      <Collapsable title={<H3>Experience</H3>} defaultCollapsed>
         <h4>Fable</h4>
         <em>
           Chief Architect, Principal Software Engineer / 2019 - 2024 / New York
@@ -151,7 +155,7 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
           </li>
         </ul>
       </Collapsable>
-      <Collapsable title={<h3>Education</h3>} defaultCollapsed>
+      <Collapsable title={<H3>Education</H3>} defaultCollapsed>
         <p>The University of Tokyo, Applied physics</p>
       </Collapsable>
     </Layout>
@@ -190,6 +194,10 @@ type DataProps = {
     }[]
   }
 }
+
+const H3 = styled.h3`
+  margin: 0;
+`
 
 export const pageQuery = graphql`
   {
