@@ -1,15 +1,16 @@
 ---
+title: CV
 date: 2024-08-01
 ---
-# **Yusuke Shibata**
+## **Yusuke Shibata**
 
 Hi, I'm Yusuke Shibata, a software engineer in United States. I'm
 originally from Japan. I had lived in Japan for almost fourty years.
 And I decided to move to New York City in United States.
 
-## **Experience**
+### **Experience**
 
-### [**Fable**](https://fable.app/)
+#### [**Fable**](https://fable.app/)
 
 *Chief Architect, Principal Software Engineer* / *2019 \- 2024 / New York City, NY*
 
@@ -21,7 +22,7 @@ And I decided to move to New York City in United States.
 * Led development of an [AI visual effect functionality](https://www.fable.app/prism) using Stable Diffusion and Python.   
 * Led a project to implement Stripe-based subscription/payment system.
 
-### **Gakko**
+#### **Gakko**
 
  *Engineering Lead, Software Engineer* / *2017 \- 2019 / Tokyo, Japan*
 
@@ -31,7 +32,7 @@ And I decided to move to New York City in United States.
 * Designed and implemented canvas renderer with React-fiber for Web and iOS (Objective C)  
 * Led the digital team, and the product we implemented attracted investors, and the engineering team spun out to my next company Fable.
 
-### **Semi-transparent Design**
+#### **Semi-transparent Design**
 
 *Engineering Lead, Software Engineer* / *2003 \- 2017 / Tokyo, Japan*
 
@@ -39,11 +40,11 @@ And I decided to move to New York City in United States.
 * JAXA space center website: Led a project to organize a massive amount of documents written by JAXA scientists, and implemented an organization system and administration web app based on WIKI structure.  
 * LeoLeoni interactive exhibition: Planned, managed and built an interactive space installation using OpenGL, Mac OS app using WebCam that was inspired by the famous picture book “Swimmy”.
 
-### **IMG SRC**
+#### **IMG SRC**
 
 *Software Engineer* / *1999 \- 2003 / Tokyo, Japan*.
 
-### **Creo**
+#### **Creo**
 
 *Software Engineer* / *1998 \- 1999 / Tokyo, Japan*
 
@@ -51,6 +52,6 @@ And I decided to move to New York City in United States.
 * Participated in a big government-driven project of TV Digital transformation. I was part of a sub-project to build a service to orchestrate a Radio Wave Transmission System in C, C++ on UNIX in a facility of Tokyo tower.  
 * Built a high performance chat server as a member of a five engineer team on UNIX, C, C++ for KDDI.
 
-## **Education**
+### **Education**
 
 The University of Tokyo, Applied physics

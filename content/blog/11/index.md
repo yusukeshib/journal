@@ -1,6 +1,5 @@
 ---
 date: 2024-11-03
-title: まだまだ就活続きます
 ---
 昨日の夜は友達が連絡してきて、彼も就職活動中なので情報交換がてら一緒にウイリアムズバーグで中華を食べた。[Kings Co Implerial](https://maps.app.goo.gl/EKUnYWYhRgTHNq947)っていう店でとても美味しかった。
 

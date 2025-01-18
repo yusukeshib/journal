@@ -14,7 +14,8 @@ function BlogPostTemplate({
     <Layout location={location}>
       <Article itemScope itemType="http://schema.org/Article">
         <header>
-          <Date itemProp="headline"> {post.frontmatter.date} </Date>
+          {post.frontmatter.title && <h1>{post.frontmatter.title}</h1>}
+          <Date itemProp="headline">{post.frontmatter.date}</Date>
         </header>
         <ArticleBody
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -78,6 +79,7 @@ type DataProps = {
     html: string
     fields: { slug: string }
     frontmatter: {
+      title?: string
       date: string
       description: string
     }
@@ -102,9 +104,7 @@ const Article = styled.article`
 
 const ArticleBody = styled.section`
   font-family: times, serif;
-  p {
-    font-size: 20px;
-  }
+  font-size: 20px;
 `
 
 const Date = styled.h1`

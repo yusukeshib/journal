@@ -1,6 +1,5 @@
 import * as React from "react"
 import { styled, createGlobalStyle } from "styled-components"
-import { Collapsable } from "../components/collapsable"
 import { Link } from "gatsby"
 
 const GlobalStyle = createGlobalStyle`
@@ -11,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
   --color-anchor-visited: #ab88ff;
 }
 body {
-  font-size: 15px;
   font-family: menlo, monospace;
   padding: 0;
   margin: 0;
