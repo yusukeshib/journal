@@ -1,33 +1,27 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
+import { styled } from "styled-components"
 import { Disqus } from "gatsby-plugin-disqus"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 
 function BlogPostTemplate({
-  data: { previous, next, site, markdownRemark: post },
+  data: { previous, next, markdownRemark: post },
   location,
 }: PageProps<DataProps>) {
   return (
     <Layout location={location}>
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <Article itemScope itemType="http://schema.org/Article">
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>
-            <em>{post.frontmatter.date}</em>
-          </p>
+          <Date itemProp="headline"> {post.frontmatter.date} </Date>
         </header>
-        <section
+        <ArticleBody
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-      </article>
-      <p className="main-heading">
+      </Article>
+      <p>
         {previous && (
           <>
             {" "}
@@ -61,7 +55,7 @@ function BlogPostTemplate({
 export function Head({ data: { markdownRemark: post } }: PageProps<DataProps>) {
   return (
     <Seo
-      title={post.frontmatter.title}
+      title={post.frontmatter.date}
       description={post.frontmatter.description || post.excerpt}
     />
   )
@@ -73,7 +67,6 @@ type DataProps = {
   site: {
     siteMetadata: {
       siteUrl: string
-      title: string
       author: {
         name: string
       }
@@ -86,23 +79,38 @@ type DataProps = {
     fields: { slug: string }
     frontmatter: {
       date: string
-      title: string
       description: string
     }
   }
   previous?: {
     fields: { slug: string }
     frontmatter: {
-      title: string
+      date: string
     }
   }
   next?: {
     fields: { slug: string }
     frontmatter: {
-      title: string
+      date: string
     }
   }
 }
+
+const Article = styled.article`
+  margin: 0 0 4em 0;
+`
+
+const ArticleBody = styled.section`
+  font-family: times, serif;
+  p {
+    font-size: 20px;
+  }
+`
+
+const Date = styled.h1`
+  font-size: 1em;
+  font-weight: normal;
+`
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

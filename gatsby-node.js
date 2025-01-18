@@ -67,7 +67,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     for (const page of pages) {
       createPage({
         path: page.fields.slug,
-        component: pageTemplate,
+        component: blogTemplate,
         context: {
           id: page.id,
         },
