@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
-import { styled } from "styled-components"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
+import { Article } from "../components/article"
 
 function IndexRoute({ data, location }: PageProps<DataProps>) {
   const posts = data.allMarkdownRemark.nodes.filter(node =>
@@ -24,30 +24,16 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
 
   return (
     <Layout location={location}>
-      <Article
-        key={posts[0].fields.slug}
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <Date to={posts[0].fields.slug} itemProp="headline">
-            {posts[0].frontmatter.date}
-          </Date>
-        </header>
-        <ArticleBody
-          dangerouslySetInnerHTML={{ __html: posts[0].html }}
-          itemProp="articleBody"
-        />
-      </Article>
+      <Article post={posts[0]} />
       <p>
         {posts[1] && (
           <>
-            {" "}
             <Link to={posts[1].fields.slug} rel="prev">
               Older
-            </Link>
+            </Link>{" "}
           </>
         )}
+        <Link to={posts[0].fields.slug}>Permalink</Link>
       </p>
     </Layout>
   )
@@ -86,26 +72,6 @@ type DataProps = {
     }[]
   }
 }
-
-const Article = styled.article`
-  margin: 0 0 4em 0;
-`
-
-const ArticleBody = styled.section`
-  font-family: times, serif;
-  p {
-    font-size: 20px;
-  }
-`
-
-const Date = styled(Link)`
-  font-size: 1em;
-  font-weight: normal;
-  color: var(--color-fg);
-  &:visited {
-    color: var(--color-fg);
-  }
-`
 
 export const pageQuery = graphql`
   {

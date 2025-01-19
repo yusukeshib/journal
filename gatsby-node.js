@@ -7,10 +7,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// Define the template for blog post
-const blogTemplate = path.resolve(`./src/templates/blog-post.tsx`)
-// Normal pages
-const pageTemplate = path.resolve(`./src/templates/page.tsx`)
+const template = path.resolve(`./src/templates/post.tsx`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -52,7 +49,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogTemplate,
+        component: template,
         context: {
           id: post.id,
           previousPostId,
@@ -67,7 +64,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     for (const page of pages) {
       createPage({
         path: page.fields.slug,
-        component: blogTemplate,
+        component: template,
         context: {
           id: page.id,
         },

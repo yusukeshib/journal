@@ -1,45 +1,35 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
-import { styled } from "styled-components"
 import { Disqus } from "gatsby-plugin-disqus"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
+import { Collapsable } from "../components/collapsable"
+import { Article } from "../components/article"
 
 function BlogPostTemplate({
-  data: { previous, next, markdownRemark: post },
+  data: { previous, site, next, markdownRemark: post },
   location,
 }: PageProps<DataProps>) {
   return (
     <Layout location={location}>
-      <Article itemScope itemType="http://schema.org/Article">
-        <header>
-          {post.frontmatter.title && <h1>{post.frontmatter.title}</h1>}
-          <Date itemProp="headline">{post.frontmatter.date}</Date>
-        </header>
-        <ArticleBody
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-      </Article>
+      <Article post={post} />
       <p>
         {previous && (
           <>
-            {" "}
             <Link to={previous.fields.slug} rel="prev">
               Older
-            </Link>
+            </Link>{" "}
           </>
         )}
         {next && (
           <>
-            {" "}
             <Link to={next.fields.slug} rel="next">
               Newer
-            </Link>
+            </Link>{" "}
           </>
-        )}{" "}
-        {/*<Collapsable>
+        )}
+        <Collapsable defaultCollapsed title={"Comments"}>
           <Disqus
             config={{
               url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
@@ -47,7 +37,7 @@ function BlogPostTemplate({
               title: post.frontmatter.title,
             }}
           />
-        </Collapsable>*/}
+        </Collapsable>
       </p>
     </Layout>
   )
@@ -97,20 +87,6 @@ type DataProps = {
     }
   }
 }
-
-const Article = styled.article`
-  margin: 0 0 4em 0;
-`
-
-const ArticleBody = styled.section`
-  font-family: times, serif;
-  font-size: 20px;
-`
-
-const Date = styled.h1`
-  font-size: 1em;
-  font-weight: normal;
-`
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

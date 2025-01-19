@@ -18,8 +18,7 @@ export function Collapsable({
 
   return (
     <>
-      <Title onClick={toggle}>
-        {collapsed ? "▸" : "▾"}
+      <Title collapsed={collapsed} href="javascript:void(0)" onClick={toggle}>
         {title}
       </Title>
 
@@ -28,10 +27,9 @@ export function Collapsable({
   )
 }
 
-const Title = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: row;
-  align-items: center;
+const Title = styled.a<{ collapsed: boolean }>`
   cursor: pointer;
+  &:before {
+    content: "${props => (props.collapsed ? "▸" : "▾")}";
+  }
 `
