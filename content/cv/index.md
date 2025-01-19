@@ -3,6 +3,8 @@ title: Yusuke Shibata
 date: 2024-08-01
 ---
 
+![](IMG_2435.jpeg)
+
 Hi, I'm Yusuke Shibata, a software engineer in United States. I'm
 originally from Japan. I had lived in Japan for almost fourty years.
 And I decided to move to New York City in United States.
