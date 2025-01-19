@@ -36,7 +36,7 @@ const ArticleContainer = styled.article`
 `
 
 const ArticleBody = styled.section`
-  font-family: times, serif;
+  font-family: sans-serif;
   font-size: 20px;
   margin: 0 0 4em 0;
 `
