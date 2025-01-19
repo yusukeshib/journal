@@ -24,7 +24,7 @@ a {
     color: var(--color-anchor-visited);
   }
 }
-ul {
+ul, ol {
   padding-inline-start: 1em;
 }
 `
