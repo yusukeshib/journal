@@ -41,7 +41,7 @@ export function Layout({
       <RootContainer>
       <Container>
         <Header>
-          <Title href="/">Journal by Yusuke</Title>(<Link to="/cv/">who?</Link>)
+          <Title href="/">Journal by Yusuke</Title>{/*(<Link to="/cv/">who?</Link>)*/}
         </Header>
         <main>{children}</main>
       </Container>
