@@ -29,6 +29,7 @@ function BlogPostTemplate({
             </Link>{" "}
           </>
         )}
+        <Link to="/list">List</Link>{" "}
         <Collapsable defaultCollapsed title={"Comments"}>
           <Disqus
             config={{

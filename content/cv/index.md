@@ -5,54 +5,57 @@ date: 2024-08-01
 
 ![](IMG_2435.jpeg)
 
-Hi, I'm Yusuke Shibata, a software engineer in United States. I'm
-originally from Japan. I had lived in Japan for almost fourty years.
-And I decided to move to New York City in United States.
+こんにちは、柴田祐介と申します。現在アメリカでソフトウェアエンジニアとして働いています。日本出身で約40年間日本に住んでいました。その後、アメリカのニューヨーク市へ移住することを決めました。今5年ほどアメリカ人住んでいます。
 
-### **Experience**
+### 経歴
 
 #### Fable
 
-*Chief Architect, Principal Software Engineer* / *2019 \- 2024 / New York City, NY*
+チーフアーキテクト、プリンシパルソフトウェアエンジニア
+2019年 - 2024年 / ニューヨーク市, NY
 
-* Fable is a browser-based motion design tool for creating animations for videos, graphics, or in-app (Lottie)use.  Fable had a team of 35 employees, 20 engineers, and over 60,000 users. ([Crunchbase](https://www.crunchbase.com/organization/fable-4b35))  
-* As chief architect, designed and implemented the major systems including Frontend, Back-end, Web Assembly, task processing infra, and the OpenGL-based renderer.  
-* Designed a flexible and extensible product structure and a file format that gives users the ability to compose reusable and complex visual-effect functionality.  
-* Led the Rust-based rendering engine including a rendering pipeline, shader system and WebAssembly integration.  
-* Designed and implemented a highly scalable GPU task (for animation frame generations and thumbnail/preview generations) processing server structure to support 10,000 instance concurrency with high availability.  
-* Led development of an [AI visual effect functionality](https://www.fable.app/prism) using Stable Diffusion and Python.   
-* Led a project to implement Stripe-based subscription/payment system.
+- Fableは、動画やグラフィック、アプリ内（Lottie対応）アニメーションを作成するためのブラウザベースのモーションデザインツールです。Fableには35人の従業員、20人のエンジニア、そして60,000人以上のユーザーがいました。（情報元：Crunchbase）
+- チーフアーキテクトとして、フロントエンド、バックエンド、WebAssembly、タスク処理インフラ、OpenGLベースのレンダラーなど主要なシステムを設計・実装。
+- 再利用可能で複雑な視覚効果機能を構築できる柔軟で拡張性のある製品構造とファイルフォーマットを設計。
+- Rustベースのレンダリングエンジンを主導し、レンダリングパイプライン、シェーダーシステム、WebAssembly統合を実現。
+- 10,000インスタンスの同時処理を高可用性でサポートするアニメーションフレーム生成やサムネイル・プレビュー生成用のGPUタスク処理サーバー構造を設計・実装。
+- Stable DiffusionとPythonを活用したAI視覚効果機能を開発。
+- Stripeを利用したサブスクリプション・決済システムの実装プロジェクトを主導。
 
 #### Gakko
 
- *Engineering Lead, Software Engineer* / *2017 \- 2019 / Tokyo, Japan*
+エンジニアリングリード、ソフトウェアエンジニア
+2017年 - 2019年 / 東京, 日本
 
-* Gakko was a platform for creating and selling animated story books for children.  
-* Designed and implemented backend using Rest API server with NodeJs and a deployment system on Github CI \+ AWS.  
-* Designed and implemented front end UI app using React and React-Native for multiple platforms  
-* Designed and implemented canvas renderer with React-fiber for Web and iOS (Objective C)  
-* Led the digital team, and the product we implemented attracted investors, and the engineering team spun out to my next company Fable.
+- Gakkoは、子供向けのアニメーション付きストーリーブックを制作・販売するためのプラットフォームです。
+- Node.jsを使用したREST APIサーバーと、Github CI + AWSを使用したデプロイメントシステムを設計・実装。
+- ReactおよびReact-Nativeを使用して複数プラットフォーム対応のフロントエンドUIアプリを設計・実装。
+- WebおよびiOS（Objective C）向けにReact-fiberを使用したキャンバスレンダラーを設計・実装。
+- デジタルチームを主導し、実装した製品が投資家の注目を集め、エンジニアリングチームは次の会社Fableへスピンアウト。
 
 #### Semi-transparent Design
 
-*Engineering Lead, Software Engineer* / *2003 \- 2017 / Tokyo, Japan*
+エンジニアリングリード、ソフトウェアエンジニア
+2003年 - 2017年 / 東京, 日本
 
-* Worked for many art installations to help many artists by writing interactive code using C, C++.  
-* JAXA space center website: Led a project to organize a massive amount of documents written by JAXA scientists, and implemented an organization system and administration web app based on WIKI structure.  
-* LeoLeoni interactive exhibition: Planned, managed and built an interactive space installation using OpenGL, Mac OS app using WebCam that was inspired by the famous picture book “Swimmy”.
+- CやC++を使用して、アートインスタレーションを支援するインタラクティブなコードを多数実装。
+- JAXA宇宙センターウェブサイト：JAXAの科学者が執筆した膨大なドキュメントを整理するプロジェクトを主導。WIKI構造に基づいた整理システムと管理ウェブアプリを実装。
+- レオ・レオーニのインタラクティブ展示：「スイミー」にインスパイアされたOpenGL、Mac OSアプリ、Webカメラを使用したインタラクティブな空間インスタレーションを企画、管理、構築。
 
 #### IMG SRC
 
-*Software Engineer* / *1999 \- 2003 / Tokyo, Japan*.
+ソフトウェアエンジニア
+1999年 - 2003年 / 東京, 日本
 
 #### Creo
 
-*Software Engineer* / *1998 \- 1999 / Tokyo, Japan*
+ソフトウェアエンジニア
+1998年 - 1999年 / 東京, 日本
 
-* Worked on a project to implement XML parser in C on Solaris Unix.  
-* Participated in a big government-driven project of TV Digital transformation. I was part of a sub-project to build a service to orchestrate a Radio Wave Transmission System in C, C++ on UNIX in a facility of Tokyo tower.  
-* Built a high performance chat server as a member of a five engineer team on UNIX, C, C++ for KDDI.
+- Solaris Unix上でCを使用してXMLパーサーを実装するプロジェクトに参加。
+- テレビデジタル化の政府主導プロジェクトに参加。サブプロジェクトでは、東京タワーの施設での電波送信システムをオーケストレーションするサービスを構築（UNIX, C, C++）。
+- UNIXとC, C++でKDDI向けの高性能チャットサーバーを5人のエンジニアチームで構築。
 
-### **Education**
+### 学歴
 
-The University of Tokyo, Applied physics
+東京大学 応用物理学科

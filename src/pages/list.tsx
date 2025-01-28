@@ -3,9 +3,8 @@ import { Link, graphql, type PageProps } from "gatsby"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
-import { Article } from "../components/article"
 
-function IndexRoute({ data, location }: PageProps<DataProps>) {
+function ListRoute({ data, location }: PageProps<DataProps>) {
   const posts = data.allMarkdownRemark.nodes.filter(node =>
     node.fields.slug.startsWith("/blog/")
   )
@@ -24,23 +23,20 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
 
   return (
     <Layout location={location}>
-      <Article post={posts[0]} />
-      <p>
-        {posts[1] && (
-          <>
-            <Link to={posts[1].fields.slug} rel="prev">
-              Older
-            </Link>{" "}
-          </>
-        )}
-        <Link to="/list">List</Link>{" "}
-        <Link to={posts[0].fields.slug}>Permalink</Link>
-      </p>
+      <ul>
+        {posts.map(post => (
+          <li key={post.fields.slug}>
+            <Link to={post.fields.slug}>
+              {post.frontmatter.date} {post.frontmatter.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </Layout>
   )
 }
 
-export default IndexRoute
+export default ListRoute
 
 /**
  * Head export to define metadata for the page
@@ -84,10 +80,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(limit: 2, sort: { frontmatter: { date: DESC } }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
-        html
         fields {
           slug
         }

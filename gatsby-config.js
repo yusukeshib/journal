@@ -13,7 +13,7 @@ module.exports = {
     author: {
       name: `yusuke`,
     },
-    description: `Journal by Yusuke Shibata`,
+    description: `Journal by Yusuke`,
     siteUrl: `https://yusukeshib.dev/`,
   },
   plugins: [
@@ -101,7 +101,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Journal by Yusuke Shibata",
+            title: "Journal by Yusuke",
           },
         ],
       },
@@ -109,8 +109,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Journal by Yusuke Shibata`,
-        short_name: `Journal by Yusuke Shibata`,
+        name: `Journal by Yusuke`,
+        short_name: `Journal by Yusuke`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website

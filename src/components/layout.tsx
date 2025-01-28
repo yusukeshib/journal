@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
   --color-anchor-visited: #ab88ff;
 }
 body {
-  font-family: menlo, monospace;
   padding: 0;
   margin: 0;
   display: flex;
@@ -36,28 +35,39 @@ export function Layout({
   location: { pathname: string }
   children: React.ReactNode
 }) {
-  const rootPath = `/`
-  const isRootPath = location.pathname === rootPath
-
   return (
     <>
       <GlobalStyle />
-      <Container data-is-root-path={isRootPath}>
+      <RootContainer>
+      <Container>
         <Header>
-          <Title href="/">Journal by Yusuke Shibata</Title>(
-          <Link to="/cv/">who?</Link>)
+          <Title href="/">Journal by Yusuke</Title>(<Link to="/cv/">who?</Link>)
         </Header>
         <main>{children}</main>
       </Container>
+      </RootContainer>
     </>
   )
 }
 
+const RootContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 const Container = styled.div`
+  box-sizing: border-box;
   padding: 1em;
   background: var(--color-bg);
   color: var(--color-fg);
-  max-width: 680px;
+  max-width: 720px;
+  width: 100%;
 `
 const Header = styled.div`
   margin: 0 0 4rem;
