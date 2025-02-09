@@ -27,7 +27,9 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
         {posts.map(post => (
           <li key={post.fields.slug}>
             <Link to={post.fields.slug}>
-              {post.frontmatter.date} {post.frontmatter.title}
+              {new Intl.DateTimeFormat('ja-JP', {
+                dateStyle: 'full',
+              }).format(new Date(post.frontmatter.date))} {post.frontmatter.title}
             </Link>
           </li>
         ))}

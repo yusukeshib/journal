@@ -51,6 +51,7 @@ export function Layout({
 }
 
 const RootContainer = styled.div`
+  font-family: sans-serif;
   position: fixed;
   top: 0;
   left: 0;

@@ -25,7 +25,9 @@ export function Article({
         itemProp="articleBody"
       />
       <footer>
-        <em itemProp="headline">{post.frontmatter.date}</em>
+        <em itemProp="headline">{new Intl.DateTimeFormat('ja-JP', {
+          dateStyle: 'full',
+        }).format(new Date(post.frontmatter.date))}</em>
       </footer>
     </ArticleContainer>
   )

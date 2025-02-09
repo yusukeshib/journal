@@ -18,19 +18,19 @@ function BlogPostTemplate({
         {previous && (
           <>
             <Link to={previous.fields.slug} rel="prev">
-              Older
+              古い日記
             </Link>{" "}
           </>
         )}
         {next && (
           <>
             <Link to={next.fields.slug} rel="next">
-              Newer
+              新しい日記
             </Link>{" "}
           </>
         )}
-        <Link to="/list">List</Link>{" "}
-        <Collapsable defaultCollapsed title={"Comments"}>
+        <Link to="/list">リスト</Link>{" "}
+        <Collapsable defaultCollapsed title={"コメント"}>
           <Disqus
             config={{
               url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,

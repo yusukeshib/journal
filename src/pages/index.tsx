@@ -29,12 +29,12 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
         {posts[1] && (
           <>
             <Link to={posts[1].fields.slug} rel="prev">
-              Older
+              古い日記
             </Link>{" "}
           </>
         )}
-        <Link to="/list">List</Link>{" "}
-        <Link to={posts[0].fields.slug}>Permalink</Link>
+        <Link to="/list">リスト</Link>{" "}
+        <Link to={posts[0].fields.slug}>個別ページ</Link>
       </p>
     </Layout>
   )
