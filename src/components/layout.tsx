@@ -1,6 +1,5 @@
 import * as React from "react"
 import { styled, createGlobalStyle } from "styled-components"
-import { Link } from "gatsby"
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -52,12 +51,6 @@ export function Layout({
 
 const RootContainer = styled.div`
   font-family: sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +60,7 @@ const Container = styled.div`
   padding: 1em;
   background: var(--color-bg);
   color: var(--color-fg);
-  max-width: 720px;
+  max-width: 840px;
   width: 100%;
 `
 const Header = styled.div`
