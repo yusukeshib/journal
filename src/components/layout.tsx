@@ -50,6 +50,7 @@ export function Layout({
 }
 
 const RootContainer = styled.div`
+  font-family: serif;
   display: flex;
   flex-direction: column;
   align-items: center;
