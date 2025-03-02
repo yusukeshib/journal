@@ -38,7 +38,5 @@ const ArticleContainer = styled.article`
 `
 
 const ArticleBody = styled.section`
-  font-family: serif;
-  font-size: 18px;
   margin: 0 0 4em 0;
 `

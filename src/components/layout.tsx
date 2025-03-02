@@ -3,10 +3,10 @@ import { styled, createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --color-fg: white;
-  --color-bg: #18140c;
-  --color-anchor: #6c93ff;
-  --color-anchor-visited: #ab88ff;
+  --color-fg: black;
+  --color-bg: white;
+  --color-anchor: blue;
+  --color-anchor-visited: purple;
 }
 body {
   padding: 0;
@@ -50,7 +50,6 @@ export function Layout({
 }
 
 const RootContainer = styled.div`
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,15 +59,13 @@ const Container = styled.div`
   padding: 1em;
   background: var(--color-bg);
   color: var(--color-fg);
-  max-width: 840px;
+  max-width: 720px;
   width: 100%;
 `
 const Header = styled.div`
   margin: 0 0 4rem;
 `
 const Title = styled.a`
-  font-size: 1em;
-  font-style: italic;
   color: var(--color-fg);
   &:visited {
     color: var(--color-fg);
