@@ -31,6 +31,7 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
                 dateStyle: 'full',
               }).format(new Date(post.frontmatter.date))} {post.frontmatter.title}
             </Link>
+             {post.excerpt}
           </li>
         ))}
       </ul>
@@ -58,7 +59,7 @@ type DataProps = {
       }
     }
   }
-  allMarkdownRemark: {
+  allmarkdownremark: {
     nodes: {
       excerpt: string
       html: string
