@@ -38,12 +38,12 @@ export function Layout({
     <>
       <GlobalStyle />
       <RootContainer>
-      <Container>
-        <Header>
-          <Title href="/">Journal by Yusuke</Title>{/*(<Link to="/cv/">who?</Link>)*/}
-        </Header>
-        <main>{children}</main>
-      </Container>
+        <Container>
+          <Header>
+            <Title href="/">Journal by Yusuke</Title>{/*(<Link to="/cv/">who?</Link>)*/}
+          </Header>
+          <main>{children}</main>
+        </Container>
       </RootContainer>
     </>
   )
@@ -53,6 +53,12 @@ const RootContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
 `
 const Container = styled.div`
   box-sizing: border-box;

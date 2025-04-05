@@ -4,6 +4,11 @@ import { Link, graphql, type PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 
+function excerpt(html: string, limit: number) {
+  const text = html.replace(/<[^>]+>/g, '');
+  return text.length > limit ? text.slice(0, limit) + '...' : text;
+}
+
 function ListRoute({ data, location }: PageProps<DataProps>) {
   const posts = data.allMarkdownRemark.nodes.filter(node =>
     node.fields.slug.startsWith("/blog/")
@@ -31,7 +36,7 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
                 dateStyle: 'full',
               }).format(new Date(post.frontmatter.date))} {post.frontmatter.title}
             </Link>
-             {post.excerpt}
+             {excerpt(post.html, 100)}
           </li>
         ))}
       </ul>
@@ -59,15 +64,13 @@ type DataProps = {
       }
     }
   }
-  allmarkdownremark: {
+  allMarkdownRemark: {
     nodes: {
-      excerpt: string
       html: string
       fields: { slug: string }
       frontmatter: {
+        title: string;
         date: string
-        title: string
-        description: string
       }
     }[]
   }
@@ -85,14 +88,14 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        excerpt
+        html
+        excerpt(pruneLength: 60)
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
-          description
+          date(formatString: "MMMM DD, YYYY")
         }
       }
     }
