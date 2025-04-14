@@ -30,7 +30,7 @@ function BlogPostTemplate({
           </>
         )}
         <Link to="/list">リスト</Link>{" "}
-        <Collapsable defaultCollapsed title={"コメント"}>
+        {/*<Collapsable defaultCollapsed title={"コメント"}>
           <Disqus
             config={{
               url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
@@ -38,7 +38,7 @@ function BlogPostTemplate({
               title: post.frontmatter.title,
             }}
           />
-        </Collapsable>
+        </Collapsable>*/}
       </p>
     </Layout>
   )
