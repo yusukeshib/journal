@@ -34,7 +34,6 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
           </>
         )}
         <Link to="/blog/">リスト</Link>{" "}
-        <Link to={posts[0].fields.slug}>個別ページ</Link>
       </p>
     </Layout>
   )
