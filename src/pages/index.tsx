@@ -4,9 +4,10 @@ import { Link, graphql, type PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { Article } from "../components/article"
-import { t } from '../utils/i18n'
+import { useTranslation } from '../utils/i18n'
 
 function IndexRoute({ data, location }: PageProps<DataProps>) {
+  const { t } = useTranslation()
   const posts = data.allMarkdownRemark.nodes.filter(node =>
     node.fields.slug.startsWith("/blog/")
   )

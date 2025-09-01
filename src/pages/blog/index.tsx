@@ -3,7 +3,7 @@ import { Link, graphql, type PageProps } from "gatsby"
 
 import { Layout } from "../../components/layout"
 import { Seo } from "../../components/seo"
-import { t } from '../../utils/i18n'
+import { useTranslation } from '../../utils/i18n'
 
 function excerpt(html: string, limit: number) {
   const text = html.replace(/<[^>]+>/g, '');
@@ -11,6 +11,7 @@ function excerpt(html: string, limit: number) {
 }
 
 function ListRoute({ data, location }: PageProps<DataProps>) {
+  const { t, i18n } = useTranslation()
   const posts = data.allMarkdownRemark.nodes.filter(node =>
     node.fields.slug.startsWith("/blog/")
   )
@@ -24,7 +25,7 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
         {posts.map(post => (
           <li key={post.fields.slug}>
             <Link to={post.fields.slug}>
-              {new Intl.DateTimeFormat('ja-JP', {
+              {new Intl.DateTimeFormat(i18n.language, {
                 dateStyle: 'full',
               }).format(new Date(post.frontmatter.date))}
             </Link>

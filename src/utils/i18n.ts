@@ -1,5 +1,5 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n, { t }  from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
@@ -29,9 +29,10 @@ i18n
   .init({
     resources,
     lng: "ja",
+    fallbackLng: "ja",
     interpolation: {
       escapeValue: false
     }
   });
 
-export const t = i18n.t;
+export { useTranslation }

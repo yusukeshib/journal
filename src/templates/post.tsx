@@ -6,12 +6,13 @@ import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { Collapsable } from "../components/collapsable"
 import { Article } from "../components/article"
-import { t } from '../utils/i18n'
+import { useTranslation } from '../utils/i18n'
 
 function BlogPostTemplate({
   data: { previous, site, next, markdownRemark: post },
   location,
 }: PageProps<DataProps>) {
+  const { t } = useTranslation()
   return (
     <Layout location={location}>
       <Article post={post} />

@@ -9,11 +9,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Journal by Yusuke`,
+    title: `Yusuke's website`,
     author: {
       name: `yusuke`,
     },
-    description: `Journal by Yusuke`,
+    description: `Yusuke's website`,
     siteUrl: `https://yusukeshib.dev/`,
   },
   plugins: [

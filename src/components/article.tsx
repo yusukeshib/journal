@@ -1,6 +1,6 @@
 import * as React from "react"
 import { styled } from "styled-components"
-import { t } from '../utils/i18n'
+import { useTranslation } from '../utils/i18n'
 
 export function Article({
   post,
@@ -16,6 +16,7 @@ export function Article({
     }
   }
 }) {
+  const { t, i18n } = useTranslation()
   return (
     <ArticleContainer itemScope itemType="http://schema.org/Article">
       <header>
@@ -26,7 +27,7 @@ export function Article({
         itemProp="articleBody"
       />
       <footer>
-        <em itemProp="headline">{new Intl.DateTimeFormat('ja-JP', {
+        <em itemProp="headline">{new Intl.DateTimeFormat(i18n.language, {
           dateStyle: 'full',
         }).format(new Date(post.frontmatter.date))}</em>
       </footer>
