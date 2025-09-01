@@ -3,6 +3,7 @@ import { Link, graphql, type PageProps } from "gatsby"
 
 import { Layout } from "../../components/layout"
 import { Seo } from "../../components/seo"
+import { t } from '../../utils/i18n'
 
 function excerpt(html: string, limit: number) {
   const text = html.replace(/<[^>]+>/g, '');
@@ -16,7 +17,9 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
 
   return (
     <Layout location={location}>
-      <h3>日記一覧</h3>
+      <h3>
+      {t('list-of-journals')}
+        </h3>
       <ul>
         {posts.map(post => (
           <li key={post.fields.slug}>

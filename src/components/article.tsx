@@ -1,5 +1,6 @@
 import * as React from "react"
 import { styled } from "styled-components"
+import { t } from '../utils/i18n'
 
 export function Article({
   post,
@@ -18,7 +19,7 @@ export function Article({
   return (
     <ArticleContainer itemScope itemType="http://schema.org/Article">
       <header>
-        <h3>{post.frontmatter.title || '無題'}</h3>
+        <h3>{post.frontmatter.title || t('untitled')}</h3>
       </header>
       <ArticleBody
         dangerouslySetInnerHTML={{ __html: post.html }}

@@ -6,6 +6,7 @@ import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { Collapsable } from "../components/collapsable"
 import { Article } from "../components/article"
+import { t } from '../utils/i18n'
 
 function BlogPostTemplate({
   data: { previous, site, next, markdownRemark: post },
@@ -18,18 +19,18 @@ function BlogPostTemplate({
         {previous && (
           <>
             <Link to={previous.fields.slug} rel="prev">
-              古い日記
+            {(t('old-journal'))}
             </Link>{" "}
           </>
         )}
         {next && (
           <>
             <Link to={next.fields.slug} rel="next">
-              新しい日記
+            {(t('new-journal'))}
             </Link>{" "}
           </>
         )}
-        <Link to="/blog/">日記一覧</Link>{" "}
+        <Link to="/blog/">{t('list-of-journals')}</Link>{" "}
         {/*<Collapsable defaultCollapsed title={"コメント"}>
           <Disqus
             config={{

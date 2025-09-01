@@ -4,6 +4,7 @@ import { Link, graphql, type PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { Article } from "../components/article"
+import { t } from '../utils/i18n'
 
 function IndexRoute({ data, location }: PageProps<DataProps>) {
   const posts = data.allMarkdownRemark.nodes.filter(node =>
@@ -12,21 +13,21 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
 
   return (
     <Layout location={location}>
-      <h2>進行中のプロジェクト</h2>
+      <h2>{t('ongoing-projects')}</h2>
       <p>
         色々とここに書いていきます。
       </p>
-      <h2>最新の日記</h2>
+      <h2>{t('latest-journal')}</h2>
       <Article post={posts[0]} />
       <p>
         {posts[1] && (
           <>
             <Link to={posts[1].fields.slug} rel="prev">
-              古い日記
+            {t('old-journal')}
             </Link>{" "}
           </>
         )}
-        <Link to="/blog/">日記一覧</Link>{" "}
+        <Link to="/blog/">{t('list-of-journals')}</Link>{" "}
       </p>
     </Layout>
   )
