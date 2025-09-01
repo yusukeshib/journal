@@ -9,9 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --color-anchor-visited: purple;
 }
 body {
-  font-family: serif;
-  padding: 0;
-  margin: 0;
+  font-family: times, serif;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link, graphql, type PageProps } from "gatsby"
 
-import { Layout } from "../components/layout"
-import { Seo } from "../components/seo"
+import { Layout } from "../../components/layout"
+import { Seo } from "../../components/seo"
 
 function excerpt(html: string, limit: number) {
   const text = html.replace(/<[^>]+>/g, '');
