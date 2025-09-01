@@ -23,9 +23,10 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
             <Link to={post.fields.slug}>
               {new Intl.DateTimeFormat('ja-JP', {
                 dateStyle: 'full',
-              }).format(new Date(post.frontmatter.date))} {post.frontmatter.title}
+              }).format(new Date(post.frontmatter.date))}
             </Link>
-             {excerpt(post.html, 100)}
+             {' '}
+             {post.frontmatter.title || excerpt(post.html, 25)}
           </li>
         ))}
       </ul>
