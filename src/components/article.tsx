@@ -18,7 +18,7 @@ export function Article({
   return (
     <ArticleContainer itemScope itemType="http://schema.org/Article">
       <header>
-        {post.frontmatter.title && <h1>{post.frontmatter.title}</h1>}
+        <h3>{post.frontmatter.title || '無題'}</h3>
       </header>
       <ArticleBody
         dangerouslySetInnerHTML={{ __html: post.html }}
@@ -34,9 +34,9 @@ export function Article({
 }
 
 const ArticleContainer = styled.article`
-  margin: 0 0 4em 0;
+  margin: 0 0 1em 0;
 `
 
 const ArticleBody = styled.section`
-  margin: 0 0 4em 0;
+  margin: 0 0 1em 0;
 `

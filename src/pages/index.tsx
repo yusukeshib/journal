@@ -10,20 +10,13 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
     node.fields.slug.startsWith("/blog/")
   )
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location}>
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout location={location}>
+      <h2>進行中のプロジェクト</h2>
+      <p>
+        色々とここに書いていきます。
+      </p>
+      <h2>最新の日記</h2>
       <Article post={posts[0]} />
       <p>
         {posts[1] && (
@@ -33,7 +26,7 @@ function IndexRoute({ data, location }: PageProps<DataProps>) {
             </Link>{" "}
           </>
         )}
-        <Link to="/blog/">リスト</Link>{" "}
+        <Link to="/blog/">日記一覧</Link>{" "}
       </p>
     </Layout>
   )

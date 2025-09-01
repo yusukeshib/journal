@@ -24,6 +24,9 @@ a {
 ul, ol {
   padding-inline-start: 1em;
 }
+.gatsby-resp-image-link {
+  margin-bottom: 1em;
+}
 `
 
 export function Layout({
@@ -39,7 +42,7 @@ export function Layout({
       <RootContainer>
         <Container>
           <Header>
-            <Title href="/">Journal by Yusuke</Title>{/*(<Link to="/cv/">who?</Link>)*/}
+            <Title href="/">Yusuke's website</Title>{/*(<Link to="/cv/">who?</Link>)*/}
           </Header>
           <main>{children}</main>
         </Container>
@@ -68,7 +71,7 @@ const Container = styled.div`
   width: 100%;
 `
 const Header = styled.div`
-  margin: 0 0 4rem;
+  margin: 0 0 2em;
 `
 const Title = styled.a`
   color: var(--color-fg);

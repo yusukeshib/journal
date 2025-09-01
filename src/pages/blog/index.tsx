@@ -14,20 +14,9 @@ function ListRoute({ data, location }: PageProps<DataProps>) {
     node.fields.slug.startsWith("/blog/")
   )
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location}>
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
-
   return (
     <Layout location={location}>
+      <h3>日記一覧</h3>
       <ul>
         {posts.map(post => (
           <li key={post.fields.slug}>
