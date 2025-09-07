@@ -1,139 +1,46 @@
 import * as React from "react"
-import { Link, graphql, type PageProps } from "gatsby"
-import { Disqus } from "gatsby-plugin-disqus"
+import { Link, type PageProps } from "gatsby"
 
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
-import { Collapsable } from "../components/collapsable"
 import { Article } from "../components/article"
 import { useTranslation } from '../utils/i18n'
+import { PageContext, } from '../types'
 
-function BlogPostTemplate({
-  data: { previous, site, next, markdownRemark: post },
-  location,
-}: PageProps<DataProps>) {
+function PostTemplate({ pageContext, }: PageProps<unknown, PageContext>) {
   const { t } = useTranslation()
   return (
-    <Layout location={location}>
-      <Article post={post} />
+    <Layout>
+      <Article post={pageContext.post} />
       <p>
-        {previous && (
+        {pageContext.previousPost && (
           <>
-            <Link to={previous.fields.slug} rel="prev">
-            {(t('old-journal'))}
+            <Link to={pageContext.previousPost.fields.slug} rel="prev">
+            {(t(`${pageContext.post.category}-prev`))}
             </Link>{" "}
           </>
         )}
-        {next && (
+        {pageContext.nextPost && (
           <>
-            <Link to={next.fields.slug} rel="next">
-            {(t('new-journal'))}
+            <Link to={pageContext.nextPost.fields.slug} rel="next">
+            {(t(`${pageContext.post.category}-next`))}
             </Link>{" "}
           </>
         )}
-        <Link to="/blog/">{t('list-of-journals')}</Link>{" "}
-        {/*<Collapsable defaultCollapsed title={"コメント"}>
-          <Disqus
-            config={{
-              url: `${site.siteMetadata?.siteUrl}${post.fields.slug}`,
-              identifier: post.fields.slug,
-              title: post.frontmatter.title,
-            }}
-          />
-        </Collapsable>*/}
+        <Link to={`/${pageContext.post.category}/`}>{t(`${pageContext.post.category}-list`)}</Link>{" "}
       </p>
     </Layout>
   )
 }
 
-export function Head({ data: { markdownRemark: post } }: PageProps<DataProps>) {
+export function Head({ pageContext }: PageProps<unknown, PageContext>) {
   return (
     <Seo
-      title={post.frontmatter.date}
-      description={post.frontmatter.description || post.excerpt}
+      title={pageContext.post.frontmatter.title || pageContext.post.frontmatter.date}
+      description={pageContext.post.excerpt}
     />
   )
 }
 
-export default BlogPostTemplate
+export default PostTemplate
 
-type DataProps = {
-  site: {
-    siteMetadata: {
-      siteUrl: string
-      author: {
-        name: string
-      }
-    }
-  }
-  markdownRemark: {
-    id: string
-    excerpt: string
-    html: string
-    fields: { slug: string }
-    frontmatter: {
-      title?: string
-      date: string
-      description: string
-    }
-  }
-  previous?: {
-    fields: { slug: string }
-    frontmatter: {
-      date: string
-    }
-  }
-  next?: {
-    fields: { slug: string }
-    frontmatter: {
-      date: string
-    }
-  }
-}
-
-export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
-    site {
-      siteMetadata {
-        siteUrl
-        title
-        author {
-          name
-        }
-      }
-    }
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-  }
-`

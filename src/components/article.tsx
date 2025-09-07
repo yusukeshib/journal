@@ -1,27 +1,15 @@
 import * as React from "react"
 import { styled } from "styled-components"
 import { useTranslation } from '../utils/i18n'
+import { Post } from "../types"
 
-export function Article({
-  post,
-}: {
-  post: {
-    excerpt: string
-    html: string
-    fields: { slug: string }
-    frontmatter: {
-      title?: string
-      date: string
-      description: string
-    }
-  }
-}) {
-  const { t, i18n } = useTranslation()
+export function Article({ post, }: { post: Post; }) {
+  const { i18n } = useTranslation()
   return (
     <ArticleContainer itemScope itemType="http://schema.org/Article">
-      <header>
-        <h3>{post.frontmatter.title || t('untitled')}</h3>
-      </header>
+      {post.frontmatter.title && <header>
+        <h3>{post.frontmatter.title}</h3>
+      </header>}
       <ArticleBody
         dangerouslySetInnerHTML={{ __html: post.html }}
         itemProp="articleBody"

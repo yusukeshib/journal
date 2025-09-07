@@ -7,22 +7,26 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const template = path.resolve(`./src/templates/post.tsx`)
+const postComponent = path.resolve(`./src/templates/post.tsx`)
+const listComponent = path.resolve(`./src/templates/list.tsx`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
-
-  // Get all markdown blog posts sorted by date
   const result = await graphql(`
     {
-      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         nodes {
           id
+          excerpt(pruneLength: 160)
+          html
           fields {
             slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
           }
         }
       }
@@ -36,41 +40,60 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     )
     return
   }
-  const nodes = result.data.allMarkdownRemark.nodes
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
-  const posts = nodes.filter(post => post.fields.slug.startsWith("/blog/"))
-  if (posts.length > 0) {
+  const map = {};
+  const posts = result.data.allMarkdownRemark.nodes.map(post => {
+    const components = post.fields.slug.split('/').filter(Boolean)
+    const category = components.slice(0, -1).join('/');
+    return { ...post, category };
+  });
+
+  for(const post of posts) {
+    if(!map[post.category]) map[post.category] = [];
+    map[post.category].push(post);
+  }
+
+  // posts
+  for(const [category, posts] of Object.entries(map)) {
     posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+      const nextPost= index === 0 ? null : posts[index - 1]
+      const previousPost = index === posts.length - 1 ? null : posts[index + 1]
 
-      createPage({
+      actions.createPage({
         path: post.fields.slug,
-        component: template,
+        component: postComponent,
         context: {
           id: post.id,
-          previousPostId,
-          nextPostId,
+          post,
+          previousPost,
+          nextPost,
         },
       })
     })
   }
 
-  const pages = nodes.filter(post => !post.fields.slug.startsWith("/blog/"))
-  if (pages.length > 0) {
-    for (const page of pages) {
-      createPage({
-        path: page.fields.slug,
-        component: template,
-        context: {
-          id: page.id,
-        },
-      })
-    }
+  // category index
+  for(const [category, posts] of Object.entries(map)) {
+    if(!category) continue;
+    actions.createPage({
+      path: `/${category}/`,
+      component: listComponent,
+      context: {
+        posts,
+        category,
+      },
+    })
   }
+
+  // root index
+  actions.createPage({
+    path: `/`,
+    component: listComponent,
+    context: {
+      posts: posts.slice(0, 10),
+      category: 'recent',
+    },
+  })
 }
 
 /**

@@ -29,20 +29,14 @@ ul, ol {
 }
 `
 
-export function Layout({
-  location,
-  children,
-}: {
-  location: { pathname: string }
-  children: React.ReactNode
-}) {
+export function Layout({ children, }: { children: React.ReactNode }) {
   return (
     <>
       <GlobalStyle />
       <RootContainer>
         <Container>
           <Header>
-            <Title href="/">Yusuke's website</Title>{/*(<Link to="/cv/">who?</Link>)*/}
+            <Title href="/">Yusuke's website</Title>
           </Header>
           <main>{children}</main>
         </Container>

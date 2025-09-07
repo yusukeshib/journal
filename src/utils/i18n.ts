@@ -4,22 +4,26 @@ import { useTranslation, initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      untitled: 'Untitled',
-      'ongoing-projects': 'Ongoing Projects',
-      'latest-journal': 'Latest Journal',
-      'list-of-journals': 'List of Journals',
-      'old-journal': 'Older Journal',
-      'new-journal': 'Newer Journal',
+      'projects/electronics-study': 'Electronics Study',
+      'projects/electronics-study-list': 'List of logs',
+      'recent-list': 'Recent Posts',
+      'blog': 'Journal',
+      'blog-latest': 'Latest Journal',
+      'blog-list': 'List of Journals',
+      'blog-prev': 'Older Journal',
+      'blog-next': 'Newer Journal',
     }
   },
   ja: {
     translation: {
-      untitled: '無題',
-      'ongoing-projects': '進行中のプロジェクト',
-      'latest-journal': '最新の日記',
-      'list-of-journals': '日記一覧',
-      'old-journal': '古い日記',
-      'new-journal': '新しい日記',
+      'projects/electronics-study': '電子工作の勉強',
+      'projects/electronics-study-list': '電子工作の勉強',
+      'recent-list': '最近のポスト',
+      'blog': '日記',
+      'blog-latest': '最新の日記',
+      'blog-list': '日記',
+      'blog-prev': '古い日記',
+      'blog-next': '新しい日記',
     }
   }
 };
