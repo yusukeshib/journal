@@ -21,7 +21,7 @@ const resources = {
       'recent-list': '最近のポスト',
       'blog': '日記',
       'blog-latest': '最新の日記',
-      'blog-list': '日記',
+      'blog-list': '日記一覧',
       'blog-prev': '古い日記',
       'blog-next': '新しい日記',
     }

@@ -90,7 +90,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     path: `/`,
     component: listComponent,
     context: {
-      posts: posts.slice(0, 10),
+      posts: posts.slice(0, 100),
       category: 'recent',
     },
   })

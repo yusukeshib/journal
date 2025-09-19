@@ -16,23 +16,16 @@ function ListRoute({ pageContext }: PageProps<unknown, ListPageContext>) {
   return (
     <Layout>
       <h3> {t(`${pageContext.category}-list`)} </h3>
+      <ul>
         {pageContext.posts.map(post => {
           const date = new Intl.DateTimeFormat(i18n.language, { dateStyle: 'full', }).format(new Date(post.frontmatter.date))
           return (
-          <div key={post.fields.slug}>
-            <p style={{ marginBottom: '2em' }}>
-              <span style={{ fontSize: '1.3em' }}>{excerpt(post.html ?? "", 100)}</span>
-              <br/>
-              <em>
-                <Link to={post.fields.slug}>{post.frontmatter.title || t('untitled')}</Link>
-                {' / '}
-                <Link to={`/${post.category}/`}>{t(post.category)}</Link>
-                {' / '}
-                {date}
-              </em>
-            </p>
-          </div>)
+          <li key={post.fields.slug}>
+            <Link to={post.fields.slug}>{date}</Link>
+            {" "}{excerpt(post.html ?? "", 25)}
+          </li>)
         })}
+        </ul>
     </Layout>
   )
 }
