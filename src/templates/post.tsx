@@ -16,14 +16,14 @@ function PostTemplate({ pageContext, }: PageProps<unknown, PageContext>) {
         {pageContext.previousPost && (
           <>
             <Link to={pageContext.previousPost.fields.slug} rel="prev">
-            {(t(`${pageContext.post.category}-prev`))}
+              {(t(`${pageContext.post.category}-prev`))}
             </Link>{" "}
           </>
         )}
         {pageContext.nextPost && (
           <>
             <Link to={pageContext.nextPost.fields.slug} rel="next">
-            {(t(`${pageContext.post.category}-next`))}
+              {(t(`${pageContext.post.category}-next`))}
             </Link>{" "}
           </>
         )}
