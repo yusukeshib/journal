@@ -4,11 +4,9 @@ import { Link, type PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/seo"
 import { Article } from "../components/article"
-import { useTranslation } from '../utils/i18n'
 import { PageContext, } from '../types'
 
 function PostTemplate({ pageContext, }: PageProps<unknown, PageContext>) {
-  const { t } = useTranslation()
   return (
     <Layout>
       <Article post={pageContext.post} />
@@ -16,18 +14,20 @@ function PostTemplate({ pageContext, }: PageProps<unknown, PageContext>) {
         {pageContext.previousPost && (
           <>
             <Link to={pageContext.previousPost.fields.slug} rel="prev">
-              {(t(`${pageContext.post.category}-prev`))}
+              前のエントリー
             </Link>{" "}
           </>
         )}
         {pageContext.nextPost && (
           <>
             <Link to={pageContext.nextPost.fields.slug} rel="next">
-              {(t(`${pageContext.post.category}-next`))}
+              次のエントリー
             </Link>{" "}
           </>
         )}
-        <Link to={`/${pageContext.post.category}/`}>{t(`${pageContext.post.category}-list`)}</Link>{" "}
+        <Link to={`/${pageContext.post.category}/`}>
+          エントリー一覧
+        </Link>{" "}
       </p>
     </Layout>
   )

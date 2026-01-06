@@ -1,7 +1,6 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { useTranslation } from '../utils/i18n'
 
 export function Seo({
   description,
@@ -30,7 +29,6 @@ export function Seo({
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-  const { i18n } = useTranslation()
 
   return (
     <>
@@ -46,7 +44,7 @@ export function Seo({
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <Helmet htmlAttributes={{ lang: i18n.language }} />
+      <Helmet htmlAttributes={{ lang: 'ja' }} />
       {children}
     </>
   )
