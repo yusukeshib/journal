@@ -16,6 +16,14 @@ const listComponent = path.resolve(`./src/templates/list.tsx`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(`
     {
+      site {
+        siteMetadata {
+          title
+          author {
+            name
+          }
+        }
+      }
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
         nodes {
           id
@@ -48,15 +56,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return { ...post, category };
   });
 
-  for(const post of posts) {
-    if(!map[post.category]) map[post.category] = [];
+  for (const post of posts) {
+    if (!map[post.category]) map[post.category] = [];
     map[post.category].push(post);
   }
 
+  const siteMetadata = {
+    title: result.data.site.siteMetadata.title,
+    author: result.data.site.siteMetadata.author,
+  }
+
   // posts
-  for(const [category, posts] of Object.entries(map)) {
+  for (const posts of Object.values(map)) {
     posts.forEach((post, index) => {
-      const nextPost= index === 0 ? null : posts[index - 1]
+      const nextPost = index === 0 ? null : posts[index - 1]
       const previousPost = index === posts.length - 1 ? null : posts[index + 1]
 
       actions.createPage({
@@ -67,20 +80,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           post,
           previousPost,
           nextPost,
+          siteMetadata,
         },
       })
     })
   }
 
   // category index
-  for(const [category, posts] of Object.entries(map)) {
-    if(!category) continue;
+  for (const [category, posts] of Object.entries(map)) {
+    if (!category) continue;
     actions.createPage({
       path: `/${category}/`,
       component: listComponent,
       context: {
         posts,
         category,
+        siteMetadata,
       },
     })
   }
@@ -92,6 +107,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     context: {
       posts: posts.slice(0, 100),
       category: 'recent',
+      siteMetadata,
     },
   })
 }

@@ -8,7 +8,7 @@ import { PageContext, } from '../types'
 
 function PostTemplate({ pageContext, }: PageProps<unknown, PageContext>) {
   return (
-    <Layout>
+    <Layout title={pageContext.siteMetadata.title}>
       <Article post={pageContext.post} />
       <p>
         {pageContext.previousPost && (

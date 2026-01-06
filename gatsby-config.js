@@ -9,11 +9,11 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `柴田祐介のウェブサイト`,
+    title: `Yusuke's website`,
     author: {
-      name: `柴田祐介`,
+      name: `yusuke`,
     },
-    description: `柴田祐介のウェブサイト`,
+    description: `Yusuke's website`,
     siteUrl: `https://yusukeshib.dev/`,
   },
   plugins: [
@@ -94,7 +94,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: `柴田祐介のウェブサイト`,
+            title: "Journal by Yusuke",
           },
         ],
       },

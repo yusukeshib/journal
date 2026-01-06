@@ -13,9 +13,9 @@ function excerpt(html: string, limit: number) {
 
 function ListRoute({ pageContext }: PageProps<unknown, ListPageContext>) {
   return (
-    <Layout>
+    <Layout title={pageContext.siteMetadata.title}>
       <h3>
-        エントリー一覧({pageContext.category})
+        エントリー一覧
       </h3>
       <List>
         {pageContext.posts.map(post => {

@@ -29,14 +29,14 @@ ul, ol {
 }
 `
 
-export function Layout({ children, }: { children: React.ReactNode }) {
+export function Layout({ title, children, }: { title: string; children: React.ReactNode }) {
   return (
     <>
       <GlobalStyle />
       <RootContainer>
         <Container>
           <Header>
-            <Title href="/">柴田祐介のウェブサイト</Title>
+            <Title href="/">{title}</Title>
           </Header>
           <main>{children}</main>
         </Container>
