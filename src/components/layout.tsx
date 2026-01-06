@@ -36,7 +36,7 @@ export function Layout({ children, }: { children: React.ReactNode }) {
       <RootContainer>
         <Container>
           <Header>
-            <Title href="/">Yusuke's website</Title>
+            <Title href="/">柴田祐介のウェブサイト</Title>
           </Header>
           <main>{children}</main>
         </Container>
