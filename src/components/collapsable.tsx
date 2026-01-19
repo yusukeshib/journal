@@ -1,4 +1,4 @@
-import React, { type ReactNode, useState } from "react"
+import { type ReactNode, useState } from "react"
 import { styled } from "styled-components"
 
 export function Collapsable({

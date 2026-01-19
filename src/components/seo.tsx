@@ -1,4 +1,4 @@
-import * as React from "react"
+import { type ReactNode } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
@@ -9,7 +9,7 @@ export function Seo({
 }: {
   description?: string
   title: string
-  children?: React.ReactNode
+  children?: ReactNode
 }) {
   const { site } = useStaticQuery(
     graphql`

@@ -1,4 +1,4 @@
-import * as React from "react"
+import { type ReactNode } from "react"
 import { styled, createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
@@ -29,7 +29,7 @@ ul, ol {
 }
 `
 
-export function Layout({ title, children, }: { title: string; children: React.ReactNode }) {
+export function Layout({ title, children, }: { title: string; children: ReactNode }) {
   return (
     <>
       <GlobalStyle />

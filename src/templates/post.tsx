@@ -1,4 +1,3 @@
-import * as React from "react"
 import { Link, type PageProps } from "gatsby"
 
 import { Layout } from "../components/layout"
