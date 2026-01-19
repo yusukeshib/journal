@@ -3,13 +3,13 @@ import { styled, createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 :root {
-  --color-fg: black;
-  --color-bg: white;
-  --color-anchor: blue;
-  --color-anchor-visited: purple;
+  --color-fg: #e0e0e0;
+  --color-bg: #1a1a1a;
+  --color-anchor: #6db3f2;
+  --color-anchor-visited: #b794f6;
 }
 body {
-  font-family: times, serif;
+  font-family: system-ui, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
