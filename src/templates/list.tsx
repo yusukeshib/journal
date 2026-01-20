@@ -14,7 +14,7 @@ function ListRoute({ pageContext }: PageProps<unknown, ListPageContext>) {
   return (
     <Layout title={pageContext.siteMetadata.title}>
       <h3>
-        エントリー一覧
+        /{pageContext.category}/
       </h3>
       <List>
         {pageContext.posts.map(post => {
