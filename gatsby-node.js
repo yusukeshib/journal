@@ -35,6 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            hidden
           }
         }
       }
@@ -50,11 +51,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const map = {};
-  const posts = result.data.allMarkdownRemark.nodes.map(post => {
-    const components = post.fields.slug.split('/').filter(Boolean)
-    const category = components.slice(0, -1).join('/');
-    return { ...post, category };
-  });
+  const posts = result.data.allMarkdownRemark.nodes
+    .filter(post => !post.frontmatter.hidden)
+    .map(post => {
+      const components = post.fields.slug.split('/').filter(Boolean)
+      const category = components.slice(0, -1).join('/');
+      return { ...post, category };
+    });
 
   for (const post of posts) {
     if (!map[post.category]) map[post.category] = [];
@@ -100,16 +103,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 
-  // root index
-  actions.createPage({
-    path: `/`,
-    component: listComponent,
-    context: {
-      posts: posts.slice(0, 100),
-      category: 'recent',
-      siteMetadata,
-    },
-  })
 }
 
 /**
@@ -166,6 +159,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      hidden: Boolean
     }
 
     type Fields {
