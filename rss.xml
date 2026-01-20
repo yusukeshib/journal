@@ -1,8 +1,77 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Journal by Yusuke]]></title><description><![CDATA[Yusuke's website]]></description><link>https://yusukeshib.dev</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jan 2026 00:44:11 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[英語をもっと本気で頑張る。今日は久しぶりに英語のオンラインレッスンを受けて相談した。この三つををちゃんと１年間きっちりやって行く。 (1) 長くて難しいビデオをフォーカスを失わずにずっと効く練習
-(…]]></description><link>https://yusukeshib.dev/blog/44/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/44/</guid><pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英語をもっと本気で頑張る。今日は久しぶりに英語のオンラインレッスンを受けて相談した。この三つををちゃんと１年間きっちりやって行く。&lt;/p&gt;
-&lt;p&gt;(1) 長くて難しいビデオをフォーカスを失わずにずっと効く練習
-(2) そのビデオでシャドーイングをする（ずっとシャドーイングは進められてたけどやってこなかった)
-(3) 英語の本をちゃんと読む(今日本語で読んでるSciFiとかを英語で読み直す)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Journal by Yusuke]]></title><description><![CDATA[Yusuke's website]]></description><link>https://yusukeshib.dev</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Jan 2026 01:07:18 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[…]]></description><link>https://yusukeshib.dev/blog/45/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/45/</guid><pubDate>Mon, 19 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;前回の日記で、英語、電子工作、その他の個人プロジェクト、運動をちゃんとスタートする、と決めてから、結構ちゃんとやってる。運動はまだちゃんとやっていない。それでもよく歩いて週末は友達とボルダリングをしにジムに行ってる。&lt;/p&gt;
+&lt;p&gt;あと健康診断位久しぶりに行ってきた。高すぎた血圧は薬のおかげで正常に下がっていた、よかった。Hピロリの検査も去年から勧められていたから300ドルしたけど呼気検査を受けた、これも陰性だった。コレステロールが高くて、相変わらず糖尿予備軍に引っかかっていた。明日リモートで色々ドクターに言われるみたい。&lt;/p&gt;
+&lt;p&gt;英語に関しては、英語で本をちゃんと読み始めた。最近はずっと日本語でSF小説ばっかり読んでるんだけど、プロジェクトヘイルメアリーを読んでなかったので、英語で読み始めた。普通の楽しく読めることに気づいたし勉強になる。英語のインタビューをたくさん聞き始めている。シャドーイングもちゃんとやれ、と英語の先生に言われてるのでやらないと。&lt;/p&gt;
+&lt;p&gt;電子工作は照明のinitialバージョンができた。こんな簡単なものでもAIにたくさん聞いて勉強できた。次のバージョン用にESP32を買った。あと、フルカラーの一つ一つ制御できるLEDストリップも買った。でも次はボタンで明るさを調整できるようにしたい。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1080px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/56f54ded0eba706061bad16a19c9d1d4/cf05f/IMG_4016.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIEAQX/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgD/2gAMAwEAAhADEAAAAbduXQsnnwS6Q7//xAAZEAEAAwEBAAAAAAAAAAAAAAABABEhAiL/2gAIAQEAAQUClWhkH0dZL0c//8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGRAAAQUAAAAAAAAAAAAAAAAAAAECECBh/9oACAEBAAY/AhJblf/EABsQAAMAAgMAAAAAAAAAAAAAAAABERAhMWFx/9oACAEBAAE/IYaDsmuG7uISNPFR6Ok//9oADAMBAAIAAwAAABCDEML/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/EB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/EB//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMUGhUf/aAAgBAQABPxAwg6DZPZoG1fWGSpkMsAFVn73RKhA1FQnTjceT/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;IMG 4016&quot;
+        title=&quot;&quot;
+        src=&quot;/static/56f54ded0eba706061bad16a19c9d1d4/47311/IMG_4016.jpg&quot;
+        srcset=&quot;/static/56f54ded0eba706061bad16a19c9d1d4/6f81f/IMG_4016.jpg 270w,
+/static/56f54ded0eba706061bad16a19c9d1d4/09d21/IMG_4016.jpg 540w,
+/static/56f54ded0eba706061bad16a19c9d1d4/47311/IMG_4016.jpg 1080w,
+/static/56f54ded0eba706061bad16a19c9d1d4/cf05f/IMG_4016.jpg 1291w&quot;
+        sizes=&quot;(max-width: 1080px) 100vw, 1080px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1080px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4de393b83c658fdef2032e7053cd7e0d/d165a/IMG_4001.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.18518518518519%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAECAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAABAP/aAAwDAQACEAMQAAABV8aKTYT/xAAaEAADAQEBAQAAAAAAAAAAAAABAgMAEQQU/9oACAEBAAEFApqXxh3GbdFCm+imn6So/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BJ//EABYRAQEBAAAAAAAAAAAAAAAAAAABIf/aAAgBAgEBPwGsf//EABsQAAICAwEAAAAAAAAAAAAAAAABETEDISIy/9oACAEBAAY/AvbRvIxwm4OWWVJ//8QAGhABAQEAAwEAAAAAAAAAAAAAAREAUWFx8f/aAAgBAQABPyE5sXDnMSd6KNUoasQPM/Dl4mm3f//aAAwDAQACAAMAAAAQQ8//xAAXEQADAQAAAAAAAAAAAAAAAAAAARFR/9oACAEDAQE/EIg7h//EABcRAAMBAAAAAAAAAAAAAAAAAAABEVH/2gAIAQIBAT8QqiWj/8QAHhAAAgEDBQAAAAAAAAAAAAAAAAERIUGxMWHB0fH/2gAIAQEAAT8Qsyaq+RQRzmFlZJ/Q7SVdq0Hk8H0N6LXZxqf/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;IMG 4001&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4de393b83c658fdef2032e7053cd7e0d/47311/IMG_4001.jpg&quot;
+        srcset=&quot;/static/4de393b83c658fdef2032e7053cd7e0d/6f81f/IMG_4001.jpg 270w,
+/static/4de393b83c658fdef2032e7053cd7e0d/09d21/IMG_4001.jpg 540w,
+/static/4de393b83c658fdef2032e7053cd7e0d/47311/IMG_4001.jpg 1080w,
+/static/4de393b83c658fdef2032e7053cd7e0d/d165a/IMG_4001.jpg 1400w&quot;
+        sizes=&quot;(max-width: 1080px) 100vw, 1080px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;仕事はやっぱり英語に足を引っ張られている気がする。まぁ毎日に詰め込みすぎないように楽しんでやっていこう。&lt;/p&gt;
+&lt;p&gt;アメリカの政治は無茶苦茶、AIの進化は異常な速度で、多分今年の終わりにはクリティカルな部分の実装は人間がやることは許されない世界になっていそう。AIのコードの方が完全に質が上回って、人間はハイレベルな(AIがさらに効率的にコードが書けるような)設計作業が主になっていそう。最近はAIの生成するコードやコードレビューの質に圧倒される。極めて有用。明らかに自分の実装するコードもAIの手助けのおかげで品質がかなり上がっている。将来の全てが不安だが楽しんでいこう。&lt;/p&gt;
+&lt;p&gt;もうちょっと日々考えてることをちゃんと書きたいけど、表面的に終わってしまう最近の日記。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[…]]></description><link>https://yusukeshib.dev/blog/44/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/44/</guid><pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英語をもっと本気で頑張る。今日は久しぶりに英語のオンラインレッスンを受けて相談した。この三つををちゃんと１年間きっちりやって行く。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;長くて難しいビデオをフォーカスを失わずにずっと効く練習&lt;/li&gt;
+&lt;li&gt;そのビデオでシャドーイングをする（ずっとシャドーイングは進められてたけどやってこなかった)&lt;/li&gt;
+&lt;li&gt;英語の本をちゃんと読む(今日本語で読んでるSciFiとかを英語で読み直す)&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;あと電子工作の個人プロジェクトも始めた。照明を作ることにした。最初はLEDストリップを使って実用的な照明を作って、ESP32とかのマイコンで進化させて行く。&lt;/p&gt;
 &lt;p&gt;きょうは仕事、今年２日目でがっつり仕事した。同僚が3DプリントのマテリアルのPETGについて聞いてきて、ちょうど自分もそのマテリアルを買ったばっかりなので、家に帰ってからたくさん印刷してテストして楽しかった。&lt;/p&gt;
 &lt;p&gt;どうでもいい日記を毎日書きたい。朝はずっとマイナスの気温なので33stで降りて14stまで歩くのは寒かった。この寒さの中でジョギングするのは不可能に近い気がするけど、今週トライしてみたい。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[…]]></description><link>https://yusukeshib.dev/blog/43/</link><guid isPermaLink="false">https://yusukeshib.dev/blog/43/</guid><pubDate>Sun, 04 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;新年が明けた。
