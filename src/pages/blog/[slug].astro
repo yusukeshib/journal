@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import Article from '../../components/Article.astro'
 import { render } from 'astro:content'
-import { getSortedPosts, getPostUrl, getPostNavigation } from '../../lib/posts'
+import { getSortedPosts, getPostUrl, getPostNavigation, plainText } from '../../lib/posts'
 
 export async function getStaticPaths() {
   const posts = await getSortedPosts()
@@ -21,7 +21,7 @@ const { Content } = await render(post)
 
 <Layout
   pageTitle={post.data.title || post.data.date.toISOString().slice(0, 10)}
-  description={post.body?.slice(0, 160)}
+  description={plainText(post.body || '', 160)}
 >
   <Article title={post.data.title} date={post.data.date}>
     <Content />

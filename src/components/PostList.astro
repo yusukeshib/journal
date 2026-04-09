@@ -1,0 +1,24 @@
+---
+import type { BlogPost } from '../lib/posts'
+import { getPostUrl, plainText } from '../lib/posts'
+
+interface Props {
+  posts: BlogPost[]
+}
+
+const { posts } = Astro.props
+---
+
+<ul class="list-none p-0">
+  {posts.map(post => {
+    const date = new Intl.DateTimeFormat('ja', { dateStyle: 'medium' }).format(post.data.date)
+    return (
+      <li class="truncate">
+        <span class="mr-4">{date}</span>
+        <a href={getPostUrl(post)}>
+          {post.data.title || plainText(post.body || '', 48)}
+        </a>
+      </li>
+    )
+  })}
+</ul>
