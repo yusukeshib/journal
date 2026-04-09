@@ -1,13 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #1a1a1a;
-  --color-fg: #e0e0e0;
-  --color-anchor: #6db3f2;
-  --color-anchor-visited: #b794f6;
+  --color-bg: #fafafa;
+  --color-fg: #1a1a1a;
+  --color-anchor: #2563eb;
+  --color-anchor-visited: #7c3aed;
 }
 
 @layer base {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #1a1a1a;
+      --color-fg: #e0e0e0;
+      --color-anchor: #6db3f2;
+      --color-anchor-visited: #b794f6;
+    }
+  }
+
   body {
     @apply bg-bg text-fg font-sans;
   }
