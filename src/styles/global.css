@@ -1,0 +1,34 @@
+:root {
+  --color-fg: #e0e0e0;
+  --color-bg: #1a1a1a;
+  --color-anchor: #6db3f2;
+  --color-anchor-visited: #b794f6;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg);
+  margin: 0;
+}
+
+a {
+  color: var(--color-anchor);
+}
+
+a:visited {
+  color: var(--color-anchor-visited);
+}
+
+ul,
+ol {
+  padding-inline-start: 1em;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}

@@ -1,15 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "lib": ["esnext", "dom"],
-    "jsx": "react-jsx",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "types": ["react", "react-dom"],
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "include": ["./src/**/*"]
+  "extends": "astro/tsconfigs/strict"
 }

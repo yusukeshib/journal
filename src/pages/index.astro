@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { getSortedPosts, getPostUrl, excerpt } from '../lib/posts'
+import profileImage from '../assets/127269.png'
+
+const posts = await getSortedPosts()
+---
+
+<Layout pageTitle="Home">
+  <section class="intro">
+    <img class="profile" src={profileImage.src} alt="Yusuke Shibata" width="128" height="128" />
+    <p>
+      2019年からニューヨークに在住しているYusuke Shibataのウェブサイトです。<br />
+      ソフトウェアエンジニアとして働いています。
+    </p>
+    <p>
+      GitHub: <a href="https://github.com/yusukeshib/" target="_blank" rel="noopener noreferrer">yusukeshib</a><br />
+      LinkedIn: <a href="https://www.linkedin.com/in/yusukeshib/" target="_blank" rel="noopener noreferrer">yusukeshib</a>
+    </p>
+  </section>
+
+  <ul class="post-list">
+    {posts.map(post => {
+      const date = new Intl.DateTimeFormat('ja', { dateStyle: 'medium' }).format(post.data.date)
+      return (
+        <li>
+          <span class="date">{date}</span>
+          <a href={getPostUrl(post)}>
+            {post.data.title || excerpt(post.body || '', 48)}
+          </a>
+        </li>
+      )
+    })}
+  </ul>
+</Layout>
+
+<style>
+  .profile {
+    border-radius: 50%;
+  }
+
+  .intro {
+    margin-bottom: 2rem;
+  }
+
+  .date {
+    margin-right: 1em;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .post-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>

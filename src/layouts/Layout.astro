@@ -1,0 +1,75 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  pageTitle?: string
+  description?: string
+}
+
+const siteTitle = "Yusuke's website"
+const siteDescription = "Yusuke's website"
+
+const { pageTitle, description } = Astro.props
+const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
+const metaDescription = description || siteDescription
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={metaDescription} />
+    <meta property="og:title" content={pageTitle || siteTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle || siteTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+  </head>
+  <body>
+    <div class="root">
+      <div class="container">
+        <header>
+          <a class="site-title" href="/">{siteTitle}</a>
+        </header>
+        <main>
+          <slot />
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+
+  .container {
+    box-sizing: border-box;
+    padding: 1em;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    max-width: 720px;
+    width: 100%;
+  }
+
+  header {
+    margin: 0 0 2em;
+  }
+
+  .site-title,
+  .site-title:visited {
+    color: var(--color-fg);
+  }
+</style>

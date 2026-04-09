@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Article from '../../components/Article.astro'
+import { render } from 'astro:content'
+import { getSortedPosts, getPostUrl, getPostNavigation } from '../../lib/posts'
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts()
+  return posts.map(post => {
+    const { previous, next } = getPostNavigation(posts, post.id)
+    return {
+      params: { slug: post.id },
+      props: { post, previous, next },
+    }
+  })
+}
+
+const { post, previous, next } = Astro.props
+const { Content } = await render(post)
+---
+
+<Layout
+  pageTitle={post.data.title || post.data.date.toISOString().slice(0, 10)}
+  description={post.body?.slice(0, 160)}
+>
+  <Article title={post.data.title} date={post.data.date}>
+    <Content />
+  </Article>
+  <p>
+    {previous && (
+      <><a href={getPostUrl(previous)} rel="prev">前のエントリー</a>{' '}</>
+    )}
+    {next && (
+      <><a href={getPostUrl(next)} rel="next">次のエントリー</a>{' '}</>
+    )}
+    <a href="/blog/">エントリー一覧</a>
+  </p>
+</Layout>
