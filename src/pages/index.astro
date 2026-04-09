@@ -7,8 +7,8 @@ const posts = await getSortedPosts()
 ---
 
 <Layout pageTitle="Home">
-  <section class="intro">
-    <img class="profile" src={profileImage.src} alt="Yusuke Shibata" width="128" height="128" />
+  <section class="mb-8">
+    <img class="rounded-full" src={profileImage.src} alt="Yusuke Shibata" width="128" height="128" />
     <p>
       2019年からニューヨークに在住しているYusuke Shibataのウェブサイトです。<br />
       ソフトウェアエンジニアとして働いています。
@@ -19,12 +19,12 @@ const posts = await getSortedPosts()
     </p>
   </section>
 
-  <ul class="post-list">
+  <ul class="list-none p-0">
     {posts.map(post => {
       const date = new Intl.DateTimeFormat('ja', { dateStyle: 'medium' }).format(post.data.date)
       return (
-        <li>
-          <span class="date">{date}</span>
+        <li class="truncate">
+          <span class="mr-4">{date}</span>
           <a href={getPostUrl(post)}>
             {post.data.title || excerpt(post.body || '', 48)}
           </a>
@@ -33,28 +33,3 @@ const posts = await getSortedPosts()
     })}
   </ul>
 </Layout>
-
-<style>
-  .profile {
-    border-radius: 50%;
-  }
-
-  .intro {
-    margin-bottom: 2rem;
-  }
-
-  .date {
-    margin-right: 1em;
-  }
-
-  .post-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .post-list li {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-</style>

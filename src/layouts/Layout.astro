@@ -29,10 +29,10 @@ const metaDescription = description || siteDescription
     <meta name="twitter:description" content={metaDescription} />
   </head>
   <body>
-    <div class="root">
-      <div class="container">
-        <header>
-          <a class="site-title" href="/">{siteTitle}</a>
+    <div class="fixed inset-0 flex flex-col items-center overflow-auto">
+      <div class="box-border w-full max-w-3xl p-4 bg-bg text-fg">
+        <header class="mb-8">
+          <a class="text-fg visited:text-fg" href="/">{siteTitle}</a>
         </header>
         <main>
           <slot />
@@ -41,35 +41,3 @@ const metaDescription = description || siteDescription
     </div>
   </body>
 </html>
-
-<style>
-  .root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    overflow: auto;
-  }
-
-  .container {
-    box-sizing: border-box;
-    padding: 1em;
-    background: var(--color-bg);
-    color: var(--color-fg);
-    max-width: 720px;
-    width: 100%;
-  }
-
-  header {
-    margin: 0 0 2em;
-  }
-
-  .site-title,
-  .site-title:visited {
-    color: var(--color-fg);
-  }
-</style>

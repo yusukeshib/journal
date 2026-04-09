@@ -12,9 +12,11 @@
     "format": "prettier --write \"**/*.{js,ts,astro,json,md}\""
   },
   "dependencies": {
-    "astro": "^5.7.5",
     "@astrojs/rss": "^4.0.11",
-    "sharp": "^0.33.5"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^5.7.5",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "prettier": "^3.5.3",

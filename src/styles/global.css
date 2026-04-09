@@ -1,34 +1,31 @@
-:root {
-  --color-fg: #e0e0e0;
+@import "tailwindcss";
+
+@theme {
   --color-bg: #1a1a1a;
+  --color-fg: #e0e0e0;
   --color-anchor: #6db3f2;
   --color-anchor-visited: #b794f6;
 }
 
-body {
-  font-family: system-ui, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--color-bg);
-  margin: 0;
-}
+@layer base {
+  body {
+    @apply bg-bg text-fg font-sans;
+  }
 
-a {
-  color: var(--color-anchor);
-}
+  a {
+    @apply text-anchor underline;
+  }
 
-a:visited {
-  color: var(--color-anchor-visited);
-}
+  a:visited {
+    color: var(--color-anchor-visited);
+  }
 
-ul,
-ol {
-  padding-inline-start: 1em;
-}
+  ul,
+  ol {
+    @apply ps-4;
+  }
 
-article img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1em;
+  article img {
+    @apply max-w-full h-auto mb-4;
+  }
 }
