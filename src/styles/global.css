@@ -29,6 +29,10 @@
     color: var(--color-anchor-visited);
   }
 
+  p {
+    @apply mb-[1em];
+  }
+
   ul,
   ol {
     @apply ps-4;
