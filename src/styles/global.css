@@ -49,4 +49,8 @@
   article figcaption {
     @apply text-sm opacity-70;
   }
+
+  hr {
+    @apply py-4;
+  }
 }
