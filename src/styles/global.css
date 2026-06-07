@@ -22,7 +22,7 @@
   }
 
   a {
-    @apply text-anchor underline;
+    @apply text-anchor no-underline hover:underline;
   }
 
   a:visited {
@@ -33,9 +33,36 @@
     @apply mb-[1em];
   }
 
-  ul,
+  h1 {
+    @apply text-3xl font-bold mt-8 mb-4;
+  }
+
+  h2 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  h3 {
+    @apply text-xl font-bold mt-6 mb-3;
+  }
+
+  h4 {
+    @apply text-lg font-semibold mt-6 mb-2;
+  }
+
+  h5 {
+    @apply text-base font-semibold mt-4 mb-2;
+  }
+
+  h6 {
+    @apply text-sm font-semibold mt-4 mb-2;
+  }
+
+  ul {
+    @apply ps-6 mb-[1em] list-disc;
+  }
+
   ol {
-    @apply ps-4;
+    @apply ps-6 mb-[1em] list-decimal;
   }
 
   article img {

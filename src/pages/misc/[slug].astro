@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getCollection, render } from 'astro:content'
+import { plainText } from '../../lib/posts'
+
+export async function getStaticPaths() {
+  const docs = await getCollection('misc')
+  return docs.map(doc => ({
+    params: { slug: doc.id },
+    props: { doc },
+  }))
+}
+
+const { doc } = Astro.props
+const { Content } = await render(doc)
+---
+
+<Layout
+  pageTitle={doc.data.title || doc.id}
+  description={plainText(doc.body || '', 160)}
+>
+  <Content />
+  <p><a href="/misc/">Back to list</a></p>
+</Layout>

@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+
+const docs = (await getCollection('misc', ({ data }) => !data.hidden)).sort(
+  (a, b) => a.id.localeCompare(b.id)
+)
+---
+
+<Layout pageTitle="/misc/">
+  <h3>/misc/</h3>
+  <ul>
+    {docs.map(doc => (
+      <li><a href={`/misc/${doc.id}/`}>{doc.data.title || doc.id}</a></li>
+    ))}
+  </ul>
+</Layout>
