@@ -51,6 +51,6 @@
   }
 
   hr {
-    @apply py-4;
+    @apply py-4 max-w-[10em] mx-auto;
   }
 }
