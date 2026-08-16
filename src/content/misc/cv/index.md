@@ -15,6 +15,7 @@ _Software Engineer (Frontend, Backend, DevOps, Infra) / 2025 \- Present / New Yo
 - Expanded role to Backend Engineering, leading the architecture design, feature development, and API implementation for the asset service, a critical foundational system.
 - Significantly improved developer efficiency and velocity by establishing repository architecture, building shared libraries, and setting up the Python development environment—optimizing the developer experience for AI-assisted workflows.
 - Designed and implemented a highly flexible crediting system.
+- Led multi platform rendering engine project in Rust
 
 ### [**Fable**](https://fable.app/)
 
