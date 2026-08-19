@@ -8,7 +8,9 @@ title: CV
 
 ### [**Mirage**](https://mirage.app)
 
-_Software Engineer (Frontend, Backend, DevOps, Infra) / 2025 \- Present / New York City, NY_
+2025 \- Present
+
+_Software Engineer (Frontend, Backend, DevOps, Infra) / New York City, NY_
 
 - Mirage is a B2C and B2B platform for short-form video generation.
 - Joined as a Frontend Engineer and designed and implemented a Workflow/Task system to enhance observability and reliability across the frontend and backend, including cross-microservice observability architecture.
@@ -19,7 +21,9 @@ _Software Engineer (Frontend, Backend, DevOps, Infra) / 2025 \- Present / New Yo
 
 ### [**Fable**](https://fable.app/)
 
-_Chief Architect, Principal Software Engineer_ / _2019 \- 2024 / New York City, NY_
+2019 \- 2024
+
+_Chief Architect, Principal Software Engineer / New York City, NY_
 
 - Fable is a browser-based motion design tool for creating animations for videos, graphics, or in-app (Lottie)use. Fable had a team of 35 employees, 20 engineers, and over 60,000 users. ([Crunchbase](https://www.crunchbase.com/organization/fable-4b35))
 - As chief architect, designed and implemented the major systems including Frontend, Back-end, Web Assembly, task processing infra, and the OpenGL-based renderer.
@@ -31,7 +35,9 @@ _Chief Architect, Principal Software Engineer_ / _2019 \- 2024 / New York City, 
 
 ### **Gakko**
 
-_Engineering Lead, Software Engineer_ / _2017 \- 2019 / Tokyo, Japan_
+2017 \- 2019
+
+_Engineering Lead, Software Engineer_ / _Tokyo, Japan_
 
 - Gakko was a platform for creating and selling animated story books for children.
 - Designed and implemented backend using Rest API server with NodeJs and a deployment system on Github CI \+ AWS.
@@ -41,7 +47,9 @@ _Engineering Lead, Software Engineer_ / _2017 \- 2019 / Tokyo, Japan_
 
 ### **Semi-transparent Design**
 
-_Engineering Lead, Software Engineer_ / _2003 \- 2017 / Tokyo, Japan_
+2003 \- 2017
+
+_Engineering Lead, Software Engineer_ / _Tokyo, Japan_
 
 - Worked for many art installations to help many artists by writing interactive code using C, C++.
 - JAXA space center website: Led a project to organize a massive amount of documents written by JAXA scientists, and implemented an organization system and administration web app based on WIKI structure.
